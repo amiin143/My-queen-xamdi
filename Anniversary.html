@@ -1,0 +1,2699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amiin ❤️ Xamdi - Happy Anniversary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <audio id="bg-music" src="romantic-song.mp3" loop></audio>
+
+    <div id="login-screen">
+        <h1 style="animation: glow 2s infinite alternate; font-size: 3rem; margin-bottom: 10px;">Amiin ❤️ Xamdi</h1>
+        <p style="font-size: 1.2rem; margin-bottom: 30px;">Fadlan Geli Furaha Qalbiga (Login)</p>
+        <div class="login-box">
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="checkLogin()">Fur Website-ka</button>
+        </div>
+    </div>
+
+    <div id="main-app">
+        
+        <header>
+            <h1>Happy 2nd Anniversary, Xamdi!</h1>
+            <p>Laba sano oo jacayl dhab ah, iyo weli in ka badan...</p>
+        </header>
+<div class="countdown-container">
+            <div class="time-box">
+                <span id="c-days">0</span>
+                <small>Maalmood</small>
+            </div>
+            <div class="time-box">
+                <span id="c-hours">0</span>
+                <small>Saacadood</small>
+            </div>
+            <div class="time-box">
+                <span id="c-mins">0</span>
+                <small>Daqiiqado</small>
+            </div>
+            <div class="time-box">
+                <span id="c-secs">0</span>
+                <small>Ilbiriqsiyo</small>
+            </div>
+        </div>
+
+        <div class="together-counter">
+            <p>We have been together for</p>
+            <div class="together-days">
+                <span id="t-days">0</span>
+                <small> Days ❤️</small>
+            </div>
+        </div>
+      <nav class="nav-grid">
+            <button class="nav-btn active" onclick="openTab('gallery', this)">📸 Gallery</button>
+            <button class="nav-btn" onclick="openTab('quiz', this)">🎮 Ciyaarteena</button>
+            <button class="nav-btn" onclick="openTab('contract', this)">✍️ Heshiiska</button>
+            <button class="nav-btn" onclick="openTab('open-when', this)">💌 Fur Markaad...</button>
+          
+           
+            <button class="nav-btn locked " data-time="2026-03-10T22:00:00" onclick="openTab('videos', this)">🔒 🎥 Videos</button>
+            
+            <button class="nav-btn locked" data-time="2026-03-11T22:00:00" onclick="openTab('music', this)">🔒 🎶 Music</button>
+            
+            <button class="nav-btn locked" data-time="2026-03-12T22:00:00" onclick="openTab('notes', this)">🔒 💌 Notes</button>
+            
+            <button class="nav-btn locked" data-time="2026-03-13T22:00:00" onclick="openTab('magic-heart', this)">🔒 ✨ Wadnaha</button>
+
+              <button class="nav-btn locked" data-time="2026-03-14T22:00:00" onclick="openTab('future-dreams', this)">💭 Riyooyinkeena</button>
+
+          <button class="nav-btn locked" data-time="2026-03-15T00:00:00" onclick="openTab('voice-note', this)">🔒 🎙️ Codkayga</button>
+              <button class="nav-btn locked" data-time="2026-03-15T00:00:00" onclick="openTab('surprise', this)" style="background: #000; color: #ff1493; border-color: #ff1493;">🔒 🎁 Surprise</button>
+       <button class="nav-btn" onclick="openTab('coupons', this)">🎟️ Tigidhada Jaceylka</button>
+       <button class="nav-btn" onclick="openTab('memory-game', this)">🃏 Xusuusteena</button>
+       <button class="nav-btn" onclick="openTab('flashlight', this)">🔦 Iftiinkayga</button>
+       <button class="nav-btn" onclick="openTab('vault', this)">🔐 Qasnadda Sirta</button>
+       <button class="nav-btn" onclick="openTab('puzzle', this)">🧩 Hal-Xiraalaheena</button>
+       <button class="nav-btn" onclick="openTab('wheel', this)">🎡 Shaagga Nasiibka</button>
+       <button class="nav-btn" onclick="openTab('truth-dare', this)">🎭 Truth & Dare</button>
+    </nav>
+<section id="gallery" class="content-section gallery-section">
+            <h2 style="color: var(--rose-red); margin-bottom: 10px; font-family: 'Georgia', serif; font-style: italic;">Sawiradeena Ugu Quruxda Badan 📸❤️</h2>
+            <!-- <p style="color: #666; margin-bottom: 30px; font-style: italic;">"boqoradeydiyey, sawir kasta guji si aad u weyneyso oo aad u akhriso xusuusta ku dhex qoran..."</p> -->
+            
+            <div class="gallery-grid">
+                <div class="polaroid-card" onclick="openLightbox(this)">
+                    <img src="images/IMG-20240419-WA0021.jpg" alt="Pic">
+                    <p class="polaroid-caption">Our beautiful moments</p>
+                </div>
+
+                <div class="polaroid-card" onclick="openLightbox(this)">
+                    <img src="images/IMG-20241028-WA0027.jpg" alt="Pic">
+                    <p class="polaroid-caption">Indhahaaga quruxda badan ee aan dunida ka dhex arko. 🌍👀</p>
+                </div>
+
+                <div class="polaroid-card" onclick="openLightbox(this)">
+                    <img src="images/IMG-20241028-WA0051.jpg" alt="Pic">
+                    <p class="polaroid-caption">Happy together</p>
+                </div>
+
+                <div class="polaroid-card" onclick="openLightbox(this)">
+                    <img src="images/IMG-20250123-WA0005.jpg" alt="Pic">
+                    <p class="polaroid-caption">Xusuusihii quruxda badnaa ee Masala View... 🥰</p>
+                </div>
+
+                <div class="polaroid-card" onclick="openLightbox(this)">
+                    <img src="images/IMG-20250123-WA0024.jpg" alt="Pic">
+                    <p class="polaroid-caption">Gacantaada oo aan waligay sii deyn doonin I.A. 🤝💍</p>
+                </div>
+
+                <div class="polaroid-card" onclick="openLightbox(this)">
+                    <img src="images/Snapchat-1136114083.jpg" alt="Pic">
+                    <p class="polaroid-caption">Qosolkaaga ayaa ii iftiimiya maalmaha mugdiga ah. 😂💖</p>
+                </div>
+
+                <div class="polaroid-card" onclick="openLightbox(this)">
+                    <img src="images/Snapchat-1804272001.jpg" alt="Pic">
+                    <p class="polaroid-caption">Laba sano, iyo jaceyl maalin walba sii kordhaya. 📈❤️</p>
+                </div>
+
+                <div class="polaroid-card" onclick="openLightbox(this)">
+                    <img src="images/Snapchat-461982137.jpg" alt="Pic">
+                    <p class="polaroid-caption">Mucjisadii ugu weyneyd ee Alle i siiyay. 🤲💎</p>
+                </div>
+
+                <div class="polaroid-card" onclick="openLightbox(this)">
+                    <img src="images/Snapchat-1924325415.jpg" alt="Pic">
+                    <p class="polaroid-caption">Dhoolacadeyntaada oo ah daawada qalbigayga. ✨</p>
+                </div>
+
+                <div class="polaroid-card" onclick="openLightbox(this)">
+                    <img src="images/Snapchat-2057687929.jpg" alt="Pic">
+                    <p class="polaroid-caption">Boqoraddayda, Janogashadii naftayda m.a 👑❤️</p>
+                </div>
+
+                <div class="polaroid-card" onclick="openLightbox(this)">
+                    <img src="images/Snapchat-363728118.jpg" alt="Pic">
+                    <p class="polaroid-caption">Ilaa aakhiro, adiga uun baan ku dooranayaa! ♾️❤️</p>
+                </div>
+
+                <div class="polaroid-card" onclick="openLightbox(this)">
+                    <img src="images/Snapchat-1893858966.jpg" alt="Pic">
+                    <p class="polaroid-caption">Agtaada waa meesha kaliya ee aan nabadda ka dareemo. 🫂🕊️</p>
+                </div>
+
+                <div class="polaroid-card" onclick="openLightbox(this)">
+                    <img src="images/Snapchat-77515702~2.jpg" alt="Pic">
+                    <p class="polaroid-caption">Qurux aan hadal lagu sifayn karin M.A. 🌸</p>
+                </div>
+            </div>
+
+            <div id="gallery-lightbox" class="lightbox-overlay" onclick="closeLightbox(event)">
+                <div class="lightbox-content">
+                    <span class="lightbox-close" onclick="closeLightbox(event)">✖</span>
+                    <img id="lightbox-img" class="lightbox-img" src="" alt="Zoomed Pic">
+                    <p id="lightbox-caption" class="lightbox-caption"></p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="quiz" class="content-section">
+            <h2 style="color: var(--rose-red); margin-bottom: 20px; font-family: 'Georgia', serif; font-style: italic;">Intee In Le'eg Ayaad I Taqaanaa? 🎮❤️</h2>
+            
+            <div class="quiz-container" id="quiz-box">
+                <div id="quiz-header" style="display: flex; justify-content: space-between; margin-bottom: 15px; color: #777; font-weight: bold;">
+                    <span id="q-counter">Su'aasha 1/10</span>
+                    <span id="score-tracker" style="color: var(--rose-red);">Dhibcaha: 0</span>
+                </div>
+                
+                <div id="question-container">
+                    <div class="question-text" id="q-text">Halkan waxaa iman doonta su'aasha...</div>
+                    <div class="options-grid" id="options-box">
+                        </div>
+                </div>
+
+                <div id="quiz-result">
+                    <div class="score-circle" id="final-score">100%</div>
+                    <h3 id="result-title" style="color: var(--rose-red); margin-bottom: 10px; font-size: 1.5rem;"></h3>
+                    <p id="result-msg" style="font-size: 1.1rem; line-height: 1.6; color: #444;"></p>
+                    <button class="nav-btn" style="margin: 25px auto 0 auto; background: var(--rose-red); color: white; border: none;" onclick="resetQuiz()">Mar Kale Ciyaar 🔄</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contract" class="content-section">
+            <div class="contract-container">
+                <div class="contract-header">
+                    <h2>Heshiiska Jacaylka Dhabta Ah ✍️❤️</h2>
+                    <p style="font-style: italic; color: #666; margin-top: 10px;">Xeerarkan waxaa la dejiyay iyadoo laga duulayo jacaylka weyn ee u dhexeeya Janogale iyo Janogasho.</p>
+                </div>
+                
+                <ul class="clause-list">
+                    <li><strong>Qodobka 1aad:</strong> Waa in aad Janogale jeclaataa maalin kasta in ka badan maalintii hore.</li>
+                    <li><strong>Qodobka 2aad:</strong> Waa inaad oggolaataa inaan mar walba anigu ku xaq dhowro, ku daryeelo, oo aan ku koolkooliyo.</li>
+                    <li><strong>Qodobka 3aad:</strong> Waa in aad dhoolacadeysaa mar kasta oo aad i aragto ama aad maqasho codkayga.</li>
+                    <li><strong>Qodobka 4aad:</strong> Waa mamnuuc, gabi ahaanba, inaad iga xanaaqdo in ka badan 10 daqiiqo (is-faham baa xal ah).</li>
+                    <li><strong>Qodobka 5aad:</strong> Waa inaad ogaataa oo aad aamintaa inaad tahay gabadha ugu quruxda badan aduunka indhahayga.</li>
+                    <li><strong>Qodobka 6aad:</strong> Waa inaad ila wadaagtaa sirahaaga, riyooyinkaaga, farxaddaada, iyo xitaa dhibaatooyinkaaga.</li>
+                    <li><strong>Qodobka 7aad:</strong> Waa in aan is garab taagnaanaa waqti kasta, xaalad kasta, culeys kasta iyo meel kasta.</li>
+                    <li><strong>Qodobka 8aad:</strong> Waa in ereyga "Waan Ku Jeclahay" iyo "Macaanteyda/Macaane" la isku yiraahdaa si joogto ah.</li>
+                    <li><strong>Qodobka 9aad:</strong> Cudurdaarka kaliya ee lagaa aqbali karo marka aad mashquul tahay waa "Aad baan kuugu xiisay".</li>
+                    <li><strong>Qodobka 10aad:</strong> Waa inaad ii ogolaataa inaan kaa farxiyo xitaa maalmaha aad ugu daalka ama walbahaarka badan tahay.</li>
+                    <li><strong>Qodobka 11aad:</strong> Heshiiskani wuxuu si rasmi ah u dhigayaa in qalbiyadeenu ay isku xiran yihiin ilaa abid I.A.</li>
+                    <li><strong>Qodobka 12aad:</strong> Ugu dambeyn, waa inaad saxiixdaa inaad aniga uun i leedahay, anigana aan adiga uun ku leeyahay! 💍</li>
+                </ul>
+
+                <button class="accept-btn" id="btn-accept" onclick="acceptContract()">Waan Oggolahay (I Accept) ✔️</button>
+                <p id="contract-success" style="display: none; text-align: center; color: var(--rose-red); font-size: 1.2rem; font-weight: bold; margin-top: 20px;">🎉 Heshiiska waa la saxiixay! Qalbigayga weligaa ayaad leedahay! ❤️</p>
+            </div>
+        </section>
+
+
+        <section id="open-when" class="content-section">
+            <h2 style="color: var(--rose-red); margin-bottom: 10px; font-family: 'Georgia', serif; font-style: italic;">Warqado Gaar Kuu Ah 💌</h2>
+            <p style="color: #666; margin-bottom: 30px; font-style: italic;">"Xppi, warqadahan fur oo keliya marka aad ku sugan tahay xaaladaha ku qoran..."</p>
+            
+            <div class="envelopes-grid">
+                <div class="envelope-card" onclick="openLetter(0)">
+                    <div class="envelope-wrapper"><div class="envelope-letter">💌</div><div class="envelope-flap"></div></div>
+                    <div class="envelope-label">Fur markaad ii xiisto...</div>
+                </div>
+                <div class="envelope-card" onclick="openLetter(1)">
+                    <div class="envelope-wrapper"><div class="envelope-letter">🥺</div><div class="envelope-flap"></div></div>
+                    <div class="envelope-label">Fur markaad iga xanaaqsan tahay...</div>
+                </div>
+                <div class="envelope-card" onclick="openLetter(2)">
+                    <div class="envelope-wrapper"><div class="envelope-letter">🤔</div><div class="envelope-flap"></div></div>
+                    <div class="envelope-label">Fur markaad jaceylkayga ka shakiso...</div>
+                </div>
+                <div class="envelope-card" onclick="openLetter(3)">
+                    <div class="envelope-wrapper"><div class="envelope-letter">😊</div><div class="envelope-flap"></div></div>
+                    <div class="envelope-label">Fur markaad u baahan tahay qosol...</div>
+                </div>
+                <div class="envelope-card" onclick="openLetter(4)">
+                    <div class="envelope-wrapper"><div class="envelope-letter">💆‍♀️</div><div class="envelope-flap"></div></div>
+                    <div class="envelope-label">Fur markaad daalan tahay/Murugsan tahay...</div>
+                </div>
+                <div class="envelope-card" onclick="openLetter(5)">
+                    <div class="envelope-wrapper"><div class="envelope-letter">🫂</div><div class="envelope-flap"></div></div>
+                    <div class="envelope-label">Fur markaad u baahan tahay laabtayda...</div>
+                </div>
+                <div class="envelope-card" onclick="openLetter(6)">
+                    <div class="envelope-wrapper"><div class="envelope-letter">🤒</div><div class="envelope-flap"></div></div>
+                    <div class="envelope-label">Fur markaad xanuunsanayso...</div>
+                </div>
+                <div class="envelope-card" onclick="openLetter(7)">
+                    <div class="envelope-wrapper"><div class="envelope-letter">🏆</div><div class="envelope-flap"></div></div>
+                    <div class="envelope-label">Fur markaad guul weyn gaarto...</div>
+                </div>
+            </div>
+
+            <div id="letter-modal" class="letter-modal">
+                <div class="letter-content">
+                    <button class="close-letter-btn" onclick="closeLetter()">X</button>
+                    <h3 id="letter-title">Title</h3>
+                    <p id="letter-body">Body</p>
+                    <p style="text-align: right; margin-top: 20px; font-weight: bold; color: var(--rose-red);">Amiin-kaaga ❤️</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="voice-note" class="content-section">
+            <h2 style="color: var(--rose-red); margin-bottom: 20px; font-family: 'Georgia', serif; font-style: italic;">Codka Qalbigayga 🎙️❤️</h2>
+            
+            <div class="voice-container">
+                <div class="voice-icon-wrapper">
+                    <button class="voice-play-btn" id="playPauseBtn" onclick="toggleVoiceNote()">
+                        ▶️
+                    </button>
+                </div>
+                
+                <div class="sound-waves" id="waves">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                
+                <p class="voice-text">"Janogasho macaan badaney, waxaan halkan kuugu reebay dareen aan la qori karin. Riix batonka si aad u maqasho codkayga..."</p>
+                
+                <audio id="myAudioMessage" src="music/Codkayga.m4a" onended="audioEnded()"></audio>
+            </div>
+        </section>
+
+      <section id="videos" class="content-section video-section">
+            <h2 style="color: var(--rose-red); margin-bottom: 10px; font-family: 'Georgia', serif; font-style: italic;">Shaleemada Jaceylkeena 🍿🎬</h2>
+            <p style="color: #666; margin-bottom: 30px; font-style: italic;">"Noloshaydii, dooro muuqaal kasta si aad shaashad weyn uga daawato xusuusaheena..."</p>
+            
+            <div class="video-grid">
+                <div class="vid-card" onclick="openVideoLightbox('videos/lv_0_20240726115854.mp4', 'Xusuus aan la ilaawi karin... 🎬❤️')">
+                    <div class="vid-thumbnail-container">
+                        <video src="videos/lv_0_20240726115854.mp4" preload="metadata"></video>
+                        <div class="play-overlay">▶</div>
+                    </div>
+                    <div class="vid-caption">Xusuus aan la ilaawi karin... 🎬❤️</div>
+                </div>
+                
+                <div class="vid-card" onclick="openVideoLightbox('videos/lv_0_20240821150744.mp4', 'Dhoola-cadeyntaada ayaa dunida iftiimisa ✨')">
+                    <div class="vid-thumbnail-container">
+                        <video src="videos/lv_0_20240821150744.mp4" preload="metadata"></video>
+                        <div class="play-overlay">▶</div>
+                    </div>
+                    <div class="vid-caption">Dhoola-cadeyntaada ayaa dunida ii iftiimisa ✨</div>
+                </div>
+                
+                <div class="vid-card" onclick="openVideoLightbox('videos/lv_0_20250315190131.mp4', 'Xusuustii Sannad Guuradeenii 1aad 🎊❤️')">
+                    <div class="vid-thumbnail-container">
+                        <video src="videos/lv_0_20250315190131.mp4" preload="metadata"></video>
+                        <div class="play-overlay">▶</div>
+                    </div>
+                    <div class="vid-caption">Xusuustii Sannad Guuradeenii 1aad 🎊❤️</div>
+                </div>
+                
+                <div class="vid-card" onclick="openVideoLightbox('videos/lv_0_20250608174746.mp4', 'Qosolkaaga macaaneey waa daawadayda 😂💖')">
+                    <div class="vid-thumbnail-container">
+                        <video src="videos/lv_0_20250608174746.mp4" preload="metadata"></video>
+                        <div class="play-overlay">▶</div>
+                    </div>
+                    <div class="vid-caption">Qosolkaagu mcn badaney waa daawadayda 😂💖</div>
+                </div>
+                
+                <div class="vid-card" onclick="openVideoLightbox('videos/lv_7178132193749863682_20241108205130.mp4', 'Waqtiyadeenii ugu quruxda badnaa... 🕰️🥰')">
+                    <div class="vid-thumbnail-container">
+                        <video src="videos/lv_7178132193749863682_20241108205130.mp4" preload="metadata"></video>
+                        <div class="play-overlay">▶</div>
+                    </div>
+                    <div class="vid-caption">Waqtiyadeenii ugu quruxda badnaa... 🕰️🥰</div>
+                </div>
+                
+                <div class="vid-card" onclick="openVideoLightbox('videos/lv_7205109483628940546_20241108210932.mp4', 'Indhahaaga ayay farxaddu ka muuqataa 👀✨')">
+                    <div class="vid-thumbnail-container">
+                        <video src="videos/lv_7205109483628940546_20241108210932.mp4" preload="metadata"></video>
+                        <div class="play-overlay">▶</div>
+                    </div>
+                    <div class="vid-caption">Indhahaaga ayay farxaddu ka muuqataa 👀✨</div>
+                </div>
+                
+                <div class="vid-card" onclick="openVideoLightbox('videos/lv_7259386634112650498_20240821144710.mp4', 'Agtaada waa jannadayda yar 🕊️🫂')">
+                    <div class="vid-thumbnail-container">
+                        <video src="videos/lv_7259386634112650498_20240821144710.mp4" preload="metadata"></video>
+                        <div class="play-overlay">▶</div>
+                    </div>
+                    <div class="vid-caption">Agtaada waa jannadayda yar 🕊️🫂</div>
+                </div>
+                
+                <div class="vid-card" onclick="openVideoLightbox('videos/lv_7409022874314411272_20240910191307.mp4', 'Sidaan isku fahamno xitaa iyadoo la aamusna yahay 🤫❤️')">
+                    <div class="vid-thumbnail-container">
+                        <video src="videos/lv_7409022874314411272_20240910191307.mp4" preload="metadata"></video>
+                        <div class="play-overlay">▶</div>
+                    </div>
+                    <div class="vid-caption">Sidaan isku fahamno xitaa iyadoo la aamusan yahay 🤫❤️</div>
+                </div>
+                
+                <div class="vid-card" onclick="openVideoLightbox('videos/lv_7428683130447465735_20241030201741.mp4', 'Muuqaal kasta oo aad ku jirto waa farshaxan 🖼️😍')">
+                    <div class="vid-thumbnail-container">
+                        <video src="videos/lv_7428683130447465735_20241030201741.mp4" preload="metadata"></video>
+                        <div class="play-overlay">▶</div>
+                    </div>
+                    <div class="vid-caption">Muuqaal kasta oo aad ku jirto waa farshaxan 🖼️😍</div>
+                </div>
+                
+                <div class="vid-card" onclick="openVideoLightbox('videos/VID-20241028-WA0125_001_001.mp4', 'Maalmo aan jeclaan lahaa inay soo noqdaan ⏪🤍')">
+                    <div class="vid-thumbnail-container">
+                        <video src="videos/VID-20241028-WA0125_001_001.mp4" preload="metadata"></video>
+                        <div class="play-overlay">▶</div>
+                    </div>
+                    <div class="vid-caption">Maalmo aan jeclaan lahaa inay soo noqdaan ⏪🤍</div>
+                </div>
+                
+                <div class="vid-card" onclick="openVideoLightbox('videos/VID-20250123-WA0016.mp4', 'Kalgacalka indhahaaga ka muuqda... 🥺💖')">
+                    <div class="vid-thumbnail-container">
+                        <video src="videos/VID-20250123-WA0016.mp4" preload="metadata"></video>
+                        <div class="play-overlay">▶</div>
+                    </div>
+                    <div class="vid-caption">Kalgacalka indhahaaga ka muuqda... 🥺💖</div>
+                </div>
+                
+                <div class="vid-card" onclick="openVideoLightbox('videos/VID-20250123-WA0032.mp4', 'Iyo inta dhiman oo aan wada qaadan doono I.A ♾️💞')">
+                    <div class="vid-thumbnail-container">
+                        <video src="videos/VID-20250123-WA0032.mp4" preload="metadata"></video>
+                        <div class="play-overlay">▶</div>
+                    </div>
+                    <div class="vid-caption">Iyo inta dhiman oo aan wada qaadan doono I.A ♾️💞</div>
+                </div>
+            </div>
+
+            <div id="video-lightbox" class="vid-lightbox" onclick="closeVideoLightbox(event)">
+                <div class="vid-lightbox-content">
+                    <span class="vid-close-btn" onclick="closeVideoLightbox(event)">✖</span>
+                    <video id="lightbox-video-player" controls autoplay playsinline></video>
+                    <p id="lightbox-video-caption" class="vid-lightbox-caption"></p>
+                </div>
+            </div>
+        </section>
+
+<section id="music" class="content-section music-section">
+            <h2 style="color: var(--rose-red); margin-bottom: 10px; font-family: 'Georgia', serif; font-style: italic;">Cajaladdii Jaceylkeena 🎧🌹</h2>
+            <p style="color: #666; margin-bottom: 30px; font-style: italic;">"Hees kasta oo halkan ku jirtaa waxay qeexaysaa qayb ka mid ah xusuusteena iyo jaceylka aan kuu qabo..."</p>
+            
+            <div class="music-grid">
+                
+                <div class="music-card-new">
+                    <div class="music-flower-bg">🌸</div>
+                    <div class="music-header">
+                        <div class="music-icon">🎵</div>
+                        <div class="music-info">
+                            <h3>Ma Ogtahay Daraadaa</h3>
+                            <p>Xusuus Gaar ah</p>
+                        </div>
+                    </div>
+                    <div class="music-quote">"Ma ogtahay in aan adiga dartaa wax badan u beddelay? Jaceylkaagu waa mid dhiiggayga raacay..." ❤️</div>
+                    <audio class="love-track" controls src="music/Ma ogtahay daraadaa.m4a"></audio>
+                </div>
+
+                <div class="music-card-new">
+                    <div class="music-flower-bg">🌹</div>
+                    <div class="music-header">
+                        <div class="music-icon">🎧</div>
+                        <div class="music-info">
+                            <h3>Cilmi Miyaad Lahayn</h3>
+                            <p>Daawadii Naftayda</p>
+                        </div>
+                    </div>
+                    <div class="music-quote">"Sida Cilmi Boodhari ayaan caashaq kuu qaaday, adiguna waxaad tahay Hodantii naftayda." 👑</div>
+                    <audio class="love-track" controls src="music/Cilmi miyaad lahayn.m4a"></audio>
+                </div>
+
+                <div class="music-card-new">
+                    <div class="music-flower-bg">🌷</div>
+                    <div class="music-header">
+                        <div class="music-icon">🎼</div>
+                        <div class="music-info">
+                            <h3>Xilligan Quruxleyda Joogta</h3>
+                            <p>Quruxdaada</p>
+                        </div>
+                    </div>
+                    <div class="music-quote">"Sida xariirta ayaad ugu dabacsan tahay qalbigayga. Erayadan adiga uun baa mudan Janogasho!" ✨</div>
+                    <audio class="love-track" controls src="music/xariir.m4a"></audio>
+                </div>
+
+                <div class="music-card-new">
+                    <div class="music-flower-bg">🌺</div>
+                    <div class="music-header">
+                        <div class="music-icon">🎶</div>
+                        <div class="music-info">
+                            <h3>Inkastoon dawaafoon</h3>
+                            <p>Dareenka Qalbiga</p>
+                        </div>
+                    </div>
+                    <div class="music-quote">"Markaan ku tabo ee aan codkaaga waayo, heesahan ayaa i dejiya oo ii sawira dhoolacadeyntaada." 🥰</div>
+                    <audio class="love-track" controls src="music/Suldan seerar.m4a"></audio>
+                </div>
+
+                <div class="music-card-new">
+                    <div class="music-flower-bg">🌻</div>
+                    <div class="music-header">
+                        <div class="music-icon">🎵</div>
+                        <div class="music-info">
+                            <h3>Halis weeyi ruux uu jaceyl</h3>
+                            <p>Jaceylkii noloshayda</p>
+                        </div>
+                    </div>
+                    <div class="music-quote">"Aduunyada inta gabdhood ee joogta, indhahaygu adiga unbay eegmadda ugu deeqaan m.a!" 👀💖</div>
+                    <audio class="love-track" controls src="music/Cawale Adan.m4a"></audio>
+                </div>
+
+                <div class="music-card-new">
+                    <div class="music-flower-bg">🌼</div>
+                    <div class="music-header">
+                        <div class="music-icon">📻</div>
+                        <div class="music-info">
+                            <h3>Amar Allee</h3>
+                            <p>Qadarta Eebbe</p>
+                        </div>
+                    </div>
+                    <div class="music-quote">"Waa amar Alle in qalbiyadeenu is doortaan. Waxaan Ilaahay ka baryayaa inuu iskeen waafajiyo." 🤲💍</div>
+                    <audio class="love-track" controls src="music/Amar Allee.m4a"></audio>
+                </div>
+
+                <div class="music-card-new">
+                    <div class="music-flower-bg">🥀</div>
+                    <div class="music-header">
+                        <div class="music-icon">🎧</div>
+                        <div class="music-info">
+                            <h3>Amaanada</h3>
+                            <p>Balanqaad</p>
+                        </div>
+                    </div>
+                    <div class="music-quote">"Amaanada jaceylkaaga, kalsoonidaada iyo naftaada si fiican baan u xafidayaa inta aan noolahay!" 🤝❤️</div>
+                    <audio class="love-track" controls src="music/Amaanada.m4a"></audio>
+                </div>
+
+                <div class="music-card-new">
+                    <div class="music-flower-bg">💐</div>
+                    <div class="music-header">
+                        <div class="music-icon">🎼</div>
+                        <div class="music-info">
+                            <h3>Gabadh Geel Goysa</h3>
+                            <p>Boqoradaydii</p>
+                        </div>
+                    </div>
+                    <div class="music-quote">"Qiimahaaga lama koobi karo, waxaad tahay boqoraddii aan adduunka ka doortay!" 👑✨</div>
+                    <audio class="love-track" controls src="music/Gabadh Geel goysa baad tahay.m4a"></audio>
+                </div>
+
+                <div class="music-card-new">
+                    <div class="music-flower-bg">🏵️</div>
+                    <div class="music-header">
+                        <div class="music-icon">🎶</div>
+                        <div class="music-info">
+                            <h3>Dadna adaa ugu Qurux badane</h3>
+                            <p>Dareen dhab ah</p>
+                        </div>
+                    </div>
+                    <div class="music-quote">"Garaaca wadnahayga iyo heestani isku mid ayay ii yihiin marka aan adiga kaa fikiro..." 💓</div>
+                    <audio class="love-track" controls src="music/ismil aarka.m4a"></audio>
+                </div>
+
+                <div class="music-card-new">
+                    <div class="music-flower-bg">🌸</div>
+                    <div class="music-header">
+                        <div class="music-icon">🎵</div>
+                        <div class="music-info">
+                            <h3>Uurkiyo Qalbiga hadii aadan ku ool</h3>
+                            <p>Macaanka Nolosha</p>
+                        </div>
+                    </div>
+                    <div class="music-quote">"Macaanka nolosha adigaan kaa dhex helay. Codkan dhegayso oo i xasuuso Xppi mcn🥰🌹!" 🫂</div>
+                    <audio class="love-track" controls src="music/hees cajiiba.m4a"></audio>
+                </div>
+
+                <div class="music-card-new">
+                    <div class="music-flower-bg">🌹</div>
+                    <div class="music-header">
+                        <div class="music-icon">🎧</div>
+                        <div class="music-info">
+                            <h3>Sawirkaagu innan yahow markaan saaro dhaayaha </h3>
+                            <p>Xusuus Qurux Badan</p>
+                        </div>
+                    </div>
+                    <div class="music-quote">"Waqtiyadeenii ugu quruxda badnaa ayaan soo xasuustaa markaan heestan shido..." 🕰️🤍</div>
+                    <audio class="love-track" controls src="music/hees kale.m4a"></audio>
+                </div>
+
+                <div class="music-card-new">
+                    <div class="music-flower-bg">🌷</div>
+                    <div class="music-header">
+                        <div class="music-icon">🎼</div>
+                        <div class="music-info">
+                            <h3>Caashaqeena</h3>
+                            <p>Dareen</p>
+                        </div>
+                    </div>
+                    <div class="music-quote">"Waan ku jeclahay maanta, berrito, iyo waligay. Jaceylkeenu ha waaro!" ♾️❤️</div>
+                    <audio class="love-track" controls src="music/4580f4d32cbafbb1bbce8b5d37923c8e.m4a"></audio>
+                </div>
+
+                <div class="music-card-new">
+                    <div class="music-flower-bg">🌺</div>
+                    <div class="music-header">
+                        <div class="music-icon">🎶</div>
+                        <div class="music-info">
+                            <h3>Qalbigayga</h3>
+                            <p>Kalgacal</p>
+                        </div>
+                    </div>
+                    <div class="music-quote">"Agtaada waa meesha aan nabadda ku dareemo. Codkan macaan adigaan kuu hibeeyay." 🕊️</div>
+                    <audio class="love-track" controls src="music/dareenkeeda oo Qudha .m4a"></audio>
+                </div>
+
+                <div class="music-card-new">
+                    <div class="music-flower-bg">🌻</div>
+                    <div class="music-header">
+                        <div class="music-icon">🎵</div>
+                        <div class="music-info">
+                            <h3>Jaceyl Waara</h3>
+                            <p>Gunaanad</p>
+                        </div>
+                    </div>
+                    <div class="music-quote">"Sannad Guuro Wacan Xamdi. Nolosha inta inoo dhiman iyadoo farxad ah inaan wada qaadano ayaan rajeynayaa!" 🎉💍</div>
+                    <audio class="love-track" controls src="music/Sanad Guuradeena.m4a"></audio>
+                </div>
+
+            </div>
+        </section>
+
+       <section id="notes" class="content-section">
+            <style>
+                .chat-box { 
+                    max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; 
+                    background: url('https://i.pinimg.com/736x/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg') center/cover; 
+                    padding: 20px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); 
+                    height: 550px; overflow-y: auto; scroll-behavior: smooth; position: relative; 
+                }
+                .chat-box::before { 
+                    content: ""; position: absolute; top:0; left:0; width:100%; height:100%; 
+                    background: rgba(255, 255, 255, 0.85); z-index: 0; border-radius: 20px; 
+                }
+                .chat-content { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 12px; }
+                .chat-box::-webkit-scrollbar { width: 6px; }
+                .chat-box::-webkit-scrollbar-thumb { background: var(--rose-red); border-radius: 10px; }
+                
+                .msg { 
+                    padding: 12px 18px; border-radius: 20px; max-width: 85%; font-size: 0.95rem; 
+                    line-height: 1.4; font-family: 'Segoe UI', sans-serif; box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+                    animation: fadeIn 0.5s ease-in; position: relative;
+                }
+                .msg-j { background: var(--rose-red); color: white; border-bottom-right-radius: 0; align-self: flex-end; }
+                .msg-x { background: white; color: var(--rose-red); border: 1px solid rgba(211,47,47,0.3); border-bottom-left-radius: 0; align-self: flex-start; }
+                .msg b { font-size: 0.75rem; opacity: 0.8; display: block; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; }
+            </style>
+
+            <h2 style="color: var(--rose-red); margin-bottom: 20px; font-family: 'Georgia', serif; font-style: italic;">Xusuusta Erayadeena 💌✨</h2>
+            
+            <div class="chat-box" id="chat-container">
+                <div class="chat-content">
+                    
+                    <div class="msg msg-j"><b>Janogale 👑</b>Hye xppi mcn, ka warran xaaladaada maanta? 👋🥰</div>
+                    <div class="msg msg-x"><b>Janogasho 👸</b>boqorkyga, waan fiicanahay Alx, adigana? 🫂♥️</div>
+                    
+                    <div class="msg msg-j"><b>Janogale 👑</b>Alx xppti mcn, hurdo ka dharagty mantee sow maaha? 😴💋</div>
+                    <div class="msg msg-x"><b>Janogasho 👸</b>Haaa mcne, waan iska nastay maanta. Ii cawe I.A ✨😘</div>
+                    
+                    <div class="msg msg-j"><b>Janogale 👑</b>Caawa xagee aadee Babe? Talk to me nooh 🥺👀</div>
+                    <div class="msg msg-x"><b>Janogasho 👸</b>Meelna xppi mcn, wax iska dawanaayay uun 📺🥀</div>
+                    
+                    <div class="msg msg-j"><b>Janogale 👑</b>Ee maxaa waye caawa qofkaan aadan ku shekyn karin, qof weyn miyaah... 😂 Xageed tagteen caawa?</div>
+                    <div class="msg msg-x"><b>Janogasho 👸</b>Masala view joognay, way sexatay markaasaan mar dhawayd imaney 🙈♥️</div>
+                    
+                    <div class="msg msg-j"><b>Janogale 👑</b>Haa sax. Hye caawa wax iskama duubin miyaa, I need to see you Babe 😍📸</div>
+                    <div class="msg msg-x"><b>Janogasho 👸</b>May xppi so cawaynay iska imaney. Sorry bbe 🥺🫂</div>
+
+                    <div class="msg msg-j"><b>Janogale 👑</b>Caadi waye mcn. Xppi mcn qurux bdney❤️ Sow ma ogid in aan ku jeclaahy? 🫀🫂</div>
+                    <div class="msg msg-x"><b>Janogasho 👸</b>Been waaye... Waa imadey 😒 Inacdey 😂</div>
+                    
+                    <div class="msg msg-j"><b>Janogale 👑</b>No Babe ani kuma nici karo... Bisinka maxaa sheegee! Qalbigayga ayaad ku nooshahay 🥰💖</div>
+                    <div class="msg msg-x"><b>Janogasho 👸</b>Hye boqorkyga qalbiga Kala jooga 🫂♥️🥀😍</div>
+                    
+                    <div class="msg msg-j"><b>Janogale 👑</b>Aad ban ugu xiisay laabtada, naxariis iyo dugsi ayaan ka helaa agtaada.. Alle ha ikaa daayo 🤲🥰❤️</div>
+                    <div class="msg msg-x"><b>Janogasho 👸</b>Ani xata ma Malaysan kartid sida kugu xiisey mcne 💋🫂♥️</div>
+                    
+                    <div class="msg msg-j"><b>Janogale 👑</b>Wan jeclahay codkaga, muuqaalkaga iyo sida aad u nooshahay... Saaid kaga fikiraa marka aad iga maqan 🥺❤️🫂</div>
+                    <div class="msg msg-x"><b>Janogasho 👸</b>Ay noloshayda 💋🫂 Kugu faaana mcne igana farxisa inta yar kula joogo ♥️</div>
+
+                    <div class="msg msg-j"><b>Janogale 👑</b>Thank you xppti, adiga noloshayda macno badan u samaynaya. Farxadada ayan tayda ka jeclahay 🥰❤️💋</div>
+                    <div class="msg msg-x"><b>Janogasho 👸</b>Uuumc mcne 🫂💋 Insha Allah I. A uuumc amiirkyga ♥️</div>
+
+                    <div class="msg msg-j"><b>Janogale 👑</b>Yaa lahaa min Qalbin jamiil 💋🥰🥰❤️</div>
+                    <div class="msg msg-x"><b>Janogasho 👸</b>Ilahay hayka xufdiyo boqorkyga 💋😍🥀♥️</div>
+
+                    <div class="msg msg-j"><b>Janogale 👑</b>Amiin dhamanten ba, Adna Alle ha ika xafido❤️🫂🥰🤲</div>
+                    <div class="msg msg-x"><b>Janogasho 👸</b>💋💋💋🫂 Ameen mcne adna ilahay hayka daayo kama maarme 😘</div>
+
+                    <div class="msg msg-j"><b>Janogale 👑</b>You are my biggest hope, inshallah waxan rajeynayaa in Alle ii rumeeyo 🥰❤️🤲🤲</div>
+                    <div class="msg msg-x"><b>Janogasho 👸</b>Insha Allah mcne I. A uuumc amiirkyga 💋🫂♥️</div>
+
+                    <div class="msg msg-j"><b>Janogale 👑</b>Uumac boqordyda the most beautiful woman in the world.. My girl my queen uumac 🥰❤️👑💋</div>
+                    <div class="msg msg-x"><b>Janogasho 👸</b>♥️🫂💋uuuuumc boqoyga uuuuuuuumc 💋💋💋</div>
+
+                    <div class="msg msg-j"><b>Janogale 👑</b>Our day will come if we just wait awhile... Waxyar inshallah way imaanaysa idam Alleh 💍❤️🤲🥰</div>
+                    <div class="msg msg-x"><b>Janogasho 👸</b>One day kula joogi doona wiliba inta noshuda Ka dhiman I. A ♥️🫂💋🥀❤️</div>
+
+                    <div class="msg msg-j"><b>Janogale 👑</b>It makes me miss you so much 🫂🫂🫂🫂🫂🫂❤️❤️</div>
+                    <div class="msg msg-x"><b>Janogasho 👸</b>Uuuumc boqorkyga ♥️😘💋</div>
+
+                    <div class="msg msg-j"><b>Janogale 👑</b>Uumac xayatii suldamatii 🫂❤️🥰🫂 Kiss or hug? 🙈</div>
+                    <div class="msg msg-x"><b>Janogasho 👸</b>Both 😘🫂</div>
+
+                    <div class="msg msg-j"><b>Janogale 👑</b>Money or me? 🤑😂</div>
+                    <div class="msg msg-x"><b>Janogasho 👸</b>Money 😂😭</div>
+
+                    <div class="msg msg-j"><b>Janogale 👑</b>Hye Babe bye 🥰❤️❤️ (Waan xanaaqay camal 🏃‍♂️)</div>
+                    <div class="msg msg-x"><b>Janogasho 👸</b>😂😂😂 xanaaq miyaa mcne kaalay 🫂♥️</div>
+
+                    <div class="msg msg-j"><b>Janogale 👑</b>Xppi mcn qurux aan hadal u baahnanyn m.a💋 Dareen aan la qarin karin ban ku qabaa my love 😍❤🫀</div>
+                    <div class="msg msg-x"><b>Janogasho 👸</b>Mahadsanid boqorkyga aan jeclhy ❤️💋♥️🫂🫂🥀</div>
+
+                    <div class="msg msg-j"><b>Janogale 👑</b>Oov qurux bdn markaas ban isku dhex yaacaa cajiib bad tahay runtii... Inaan kugu waasho miyaa rabtaa 🥰❤️🫂😍</div>
+                    <div class="msg msg-x"><b>Janogasho 👸</b>Runti 😘🫂 Ana waxan ku balan qadaya inan noqdo babar cafis badan ❤️💋🫂🥀</div>
+
+                    <div class="msg msg-j"><b>Janogale 👑</b>Boqoradyda wan jeckahay uumac illahay ha ikaa daayo 🫂💋🥰❤️💍</div>
+                    <div class="msg msg-x"><b>Janogasho 👸</b>Ani xata ku jeclahay noloshyda lkn hadana ma aqaan 💋♥️🫂🥺</div>
+
+                    <div class="msg msg-j"><b>Janogale 👑</b>Afur/Suxuur wacan xppi mcn🥰🤲🤲 (Mar walba waan ku xasuustaa)</div>
+                    <div class="msg msg-x"><b>Janogasho 👸</b>Habeen/Maalin wanagsan xaaji ♥️🫂💋❤️😘</div>
+
+                    <div class="msg msg-j"><b>Janogale 👑</b>Laba sano ayaa inoo buuxsantay xayatii, adiga ayaan mar walba dooran lahaa 🎊❤️🥰</div>
+                    <div class="msg msg-x"><b>Janogasho 👸</b>Happy Anniversary boqorkyga! Sanado badan oo farxad leh I.A 🎊♥️💋🫂</div>
+
+                    <div class="msg msg-j"><b>Janogale 👑</b>My future wife I. A 💍❤️ Uumac quruxdyda 🥰</div>
+                    <div class="msg msg-x"><b>Janogasho 👸</b>My future husband I. A 💍♥️ Uuumc mcne 🫂💋</div>
+                </div>
+            </div>
+
+            <div class="reason-generator">
+                <h3>Maxaan Kuu Jeclahay, Janogasho? 💖</h3>
+                <div id="reason-display">Taabo batoonka hoose si aad u ogaato sirta qalbigayga...</div>
+                <button class="btn-reason" onclick="generateReason()">I Tusi Sababta ✨</button>
+            </div>
+        </section>
+
+
+<section id="future-dreams" class="content-section">
+            <h2 style="color: var(--rose-red); margin-bottom: 10px; font-family: 'Georgia', serif; font-style: italic;">Mustaqbalkeena I.A 💭❤️</h2>
+            <p class="dreams-intro">"Janogasho, labadan sano waa uun hordhaca sheekadeena. Halkan waxaa ku qoran waxyaabaha aan Ilaahay ka baryayo inaan kula wadaago inta nolosheyda ka dhiman..."</p>
+            
+            <div class="dreams-container">
+                
+                <div class="dream-card">
+                    <div class="dream-icon">💍</div>
+                    <div class="dream-text">
+                        <h3>Arooskeena Qiimaha Badan</h3>
+                        <p>In aan maalin qura noqono lamaane xalaal ah. In aan ku arko adigoo xidhan dharka cad ee arooska oo aad iigu muuqato sida boqorad, anigoo farxad la ilmaynaya markaan gacantaada qabto.</p>
+                    </div>
+                </div>
+
+                <div class="dream-card">
+                    <div class="dream-icon">🏡</div>
+                    <div class="dream-text">
+                        <h3>Gurigeena Jacaylka</h3>
+                        <p>In aan wada dhisano guri naxariis, qosol, iyo xasilooni ka buuxdo. Meel aan ku illowno buuqa aduunka oo dhan, oo ah jannadeena yar ee aan aniga iyo adiga iska leenahay.</p>
+                    </div>
+                </div>
+
+                <div class="dream-card">
+                    <div class="dream-icon">👨‍👩‍👧‍👦</div>
+                    <div class="dream-text">
+                        <h3>Carruur Nuurkaaga Leh</h3>
+                        <p>In Ilaahay inagu arzuqo carruur qurux badan oo adiga kuu eg, indhahaagana leh. In aan wada korino qoys diinta iyo jacaylka ku dhisan, oo aan noqono waalidiinta ugu fiican I.A.</p>
+                    </div>
+                </div>
+
+                <div class="dream-card">
+                    <div class="dream-icon">✈️</div>
+                    <div class="dream-text">
+                        <h3>Inaan Aduunka Wada Marno</h3>
+                        <p>In aan gacmaha is haysano oo aan safaro ku tagno meelaha ugu quruxda badan aduunka. In aan xaramka soo wada cumraysano anigoo ku garab taagan, xusuuso cusubna soo wada samayno.</p>
+                    </div>
+                </div>
+
+                <div class="dream-card">
+                    <div class="dream-icon">🤝</div>
+                    <div class="dream-text">
+                        <h3>Garab Istaag Joogto Ah</h3>
+                        <p>In aan mar walba garabkaaga ahaado. Xilliga aad faraxsan tahay inaan kula qoslo, xilliga aad murugeysan tahayna inaan ku garab istaago oo aan ilinta kaa tirtiro.</p>
+                    </div>
+                </div>
+
+                <div class="dream-card">
+                    <div class="dream-icon">👴👵</div>
+                    <div class="dream-text">
+                        <h3>Inaan Wada Gaboowno</h3>
+                        <p>Dhalinyaronimada kadib, in aan wada gaboowno inagoo weli is jecel sidii maalintii ugu horaysay ee aan is baranay. Gacmahana is haysana ilaa aynu jannada uga wada gudubno I.A.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+           <section id="surprise" class="content-section">
+            <div id="surprise-wrapper">
+                
+                <div id="surprise-menu">
+                    <h2>SANNAD GUURO WACAN!</h2>
+                    <p>Taabo batoonada hoose si aad u furto hadyadayda</p>
+                    <button class="btn-surprise" onclick="showScene('flower')">RIIX SI AAD U ARAGTO UBAXA</button>
+                    <button class="btn-surprise" onclick="showScene('letter')">RIIX SI AAD U FURTO WARQADDA</button>
+                </div>
+
+                <div id="flower-scene">
+                    <button style="position:absolute; top:20px; right:20px; z-index:10; padding:10px; cursor:pointer; background: #ff1493; color: white; border: none; border-radius: 5px;" onclick="backToSurprise()">Dib U Noqo</button>
+                    <div class="firefly" style="top:30%; left:40%; animation-delay:0s;"></div>
+                    <div class="firefly" style="top:20%; left:50%; animation-delay:1s;"></div>
+                    <div class="firefly" style="top:40%; left:60%; animation-delay:0.5s;"></div>
+                    <div class="firefly" style="top:50%; left:30%; animation-delay:1.5s;"></div>
+                    
+                    <div class="flower-container">
+                        <div class="stem stem-1"><div class="leaf"></div><div class="bloom"></div></div>
+                        <div class="stem stem-2"><div class="leaf"></div><div class="bloom"></div></div>
+                        <div class="stem stem-3"><div class="leaf"></div><div class="bloom"></div></div>
+                        <div class="stem stem-4"><div class="leaf"></div><div class="bloom"></div></div>
+                        <div class="stem stem-5"><div class="leaf"></div><div class="bloom"></div></div>
+                        <div class="stem stem-6"><div class="leaf"></div><div class="bloom"></div></div>
+                        <div class="stem stem-7"><div class="leaf"></div><div class="bloom"></div></div>
+                    </div>
+                </div>
+
+                <div id="letter-scene">
+                    <button style="position:absolute; top:20px; right:20px; z-index:10; padding:10px; cursor:pointer; background: #ff1493; color: white; border: none; border-radius: 5px;" onclick="backToSurprise()">Dib U Noqo</button>
+                    
+                    <div class="book" onclick="this.classList.toggle('open')">
+                        <div class="page page-left">
+                            <div class="polaroid">
+                                <img src="heart-collage.jpg" alt="Love Collage" style="background:#ddd; height:150px; display:block;">
+                            </div>
+                        </div>
+                        
+                        <div class="page page-right">
+                            <h3>Sannad Guuro Wacan, Janogasho!</h3>
+                            <br>
+                            <p>
+                                Salaam Macaan badanteyda! Sannad guuro wacan 🎊 In kasta oo waqtigu socdo, jacaylkeenu wuu sii xoogaysanayaa. Maalin kasta waxay i xusuusisaa qiimaha aad agtayda ku leedahay. <br><br>
+                                Safarkeena aan wada galnay wuxuu i baray dulqaad, aaminaad, iyo macnaha dhabta ah ee daacadnimada. Si xiiso leh ayaan u sugaa berrito kasta oo aan kula qaadanayo. <br><br>
+                                Tani waa dabbaaldegga jacaylkeena aan xadka lahayn. Waan ku jeclahay in ka badan inta erayo lagu cabbiri karo. Sannad guuro wacan, qalbigaygiyey. 😘
+                            </p>
+                            <br>
+                            <p style="text-align: right; margin-top: 15px; font-weight: bold; color: var(--rose-red);">Waxa Qoray ❤️<br>Amiin-kaaga</p>
+                        </div>
+
+                        <div class="page page-cover">
+                            <h1>Sannad<br>Guuro</h1>
+                            <div style="width: 50%; height: 2px; background: white; margin: 20px 0;"></div>
+                            <div class="open-btn">Riix si aad u furto >>></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section id="magic-heart" class="content-section">
+            <h2 class="magic-title">Sannad Guuro Wacan, Janogasho ❤️</h2>
+            <br>
+            <canvas id="heartCanvas"></canvas>
+            
+            <div class="ring-container">
+                <div class="ring-text" id="ring-text">
+                    </div>
+            </div>
+<br>
+<br>
+            <div class="magic-footer">
+                <p> Adaan kugu talagalay Hadiyadan maalinteena gaarka ah, Adiga dartaa, macaan badanteyda,.</p>
+                <p>Waan ku jeclahay, qalbigayga oo dhan adaa leh. 💖</p>
+            </div>
+        </section>
+
+
+<section id="coupons" class="content-section">
+            <h2 style="color: var(--rose-red); margin-bottom: 10px; font-family: 'Georgia', serif; font-style: italic;">Tigidhada VIP-ga 🎟️✨</h2>
+            <p style="color: #666; margin-bottom: 30px; font-style: italic; font-size: 1.1rem;">"Qurux badanteyda, mid walba hal mar ayaad isticmaali kartaa. Farta/Mouse-ka ku xoq si aad u aragto waxa kuugu jira!"</p>
+            
+            <div class="coupons-grid">
+                <div class="coupon-card">
+                    <div class="coupon-inner">
+                        <div class="coupon-header"><span class="coupon-title">MAALINTA "HAA" KELIYA</span><span style="font-size: 1.5rem;">👑</span></div>
+                        <div class="scratch-container">
+                            <div class="scratch-content">Maanta wax kasta oo aad i weydiisato, jawaabtaydu waa "HAA" oo keliya! Dood malaha boqoradeydiyey.</div>
+                            <canvas class="scratch-pad"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="coupon-card">
+                    <div class="coupon-inner">
+                        <div class="coupon-header"><span class="coupon-title">DALXIISKA CIIDDA</span><span style="font-size: 1.5rem;">📸</span></div>
+                        <div class="scratch-container">
+                            <div class="scratch-content">Wuxuu ku siinayaa hal maalin oo dalxiis iyo damaashaad ah maalmaha Ciidda, anigoo ah sawirqaadahaaga!</div>
+                            <canvas class="scratch-pad"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="coupon-card">
+                    <div class="coupon-inner">
+                        <div class="coupon-header"><span class="coupon-title">GUUSHA DOODDA</span><span style="font-size: 1.5rem;">🏆</span></div>
+                        <div class="scratch-container">
+                            <div class="scratch-content">Markaan is qabanno, tigidhkan i tus. Si toos ah ayaad u guulaysanaysaa, anigaana ku raalligelinaya!</div>
+                            <canvas class="scratch-pad"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="coupon-card">
+                    <div class="coupon-inner">
+                        <div class="coupon-header"><span class="coupon-title">DARYEEL & KOOLKOOLIN</span><span style="font-size: 1.5rem;">💆‍♀️</span></div>
+                        <div class="scratch-container">
+                            <div class="scratch-content">Waxaan kuu balan qaadayaa duugis (massage), daryeel, iyo inaan ku illowsiiyo buuqa adduunka.</div>
+                            <canvas class="scratch-pad"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="coupon-card">
+                    <div class="coupon-inner">
+                        <div class="coupon-header"><span class="coupon-title">FILIM KHADKA AH</span><span style="font-size: 1.5rem;">🍿</span></div>
+                        <div class="scratch-container">
+                            <div class="scratch-content">Dooro habeen. Khadka ayaan soo wada gelaynaa, filim ayaan wada daawanaynaa.</div>
+                            <canvas class="scratch-pad"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="coupon-card">
+                    <div class="coupon-inner">
+                        <div class="coupon-header"><span class="coupon-title">CASHO KALGACAL</span><span style="font-size: 1.5rem;">🍽️</span></div>
+                        <div class="scratch-container">
+                            <div class="scratch-content">Wuxuu kuu oggolaanayaa hal casho oo aan anigu bixinayo. Cuntada adigaa dooranaya xayatii!</div>
+                            <canvas class="scratch-pad"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="coupon-card">
+                    <div class="coupon-inner">
+                        <div class="coupon-header"><span class="coupon-title">DIB-U-xusid</span><span style="font-size: 1.5rem;">🕰️</span></div>
+                        <div class="scratch-container">
+                            <div class="scratch-content">Tigidhkani wuxuu inoo celinayaa xusuusihii hore. Waxaan kuu kaxayn doonaa meeshii ugu horraysay ee aan ku kulanno!</div>
+                            <canvas class="scratch-pad"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="coupon-card">
+                    <div class="coupon-inner">
+                        <div class="coupon-header"><span class="coupon-title">LAAB DIIRAN</span><span style="font-size: 1.5rem;">🫂</span></div>
+                        <div class="scratch-container">
+                            <div class="scratch-content">Marka ugu horraysa ee aan indhaha is-saarno Ramadaanka kadib, wuxuu ku siinayaa Laab aan xad lahayn!</div>
+                            <canvas class="scratch-pad"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="coupon-card">
+                    <div class="coupon-inner">
+                        <div class="coupon-header"><span class="coupon-title">DHEGAYSIGAAGA</span><span style="font-size: 1.5rem;">👂</span></div>
+                        <div class="scratch-container">
+                            <div class="scratch-content">Markaad u baahan tahay qof ku dhegaysta adigoon lagu xukumin. Wuxuu i farayaa inaan ku fahmo.</div>
+                            <canvas class="scratch-pad"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="coupon-card">
+                    <div class="coupon-inner">
+                        <div class="coupon-header"><span class="coupon-title">VIP-GA QALBIGAYGA</span><span style="font-size: 1.5rem;">💍</span></div>
+                        <div class="scratch-container">
+                            <div class="scratch-content">Kani waa kan ugu weyn! Wuxuu caddeynayaa inaad tahay VIP-ga kaliya ee qalbigayga degan weligeed.</div>
+                            <canvas class="scratch-pad"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="memory-game" class="content-section">
+            <h2 style="color: var(--rose-red); margin-bottom: 10px; font-family: 'Georgia', serif; font-style: italic;">Qayb ka mida Xusuusteena 🗣️❤️</h2>
+            <p style="color: #666; margin-bottom: 20px; font-style: italic;">"suldamatii, dusha ka guji kaarka si uu kugu furmo, kadibna aan ka wada sheekaysano waxa ku qoran!"</p>
+            
+            <div class="memory-game-container">
+                <div id="card-counter">Kaarka 1 / 7</div>
+                
+                <div class="scene" onclick="flipCard()">
+                    <div class="card-3d" id="active-card">
+                        
+                        <div class="card-face card-face-front">
+                            <h3>🃏</h3>
+                            <p>Taabo Si Aad U Furto</p>
+                        </div>
+                        
+                        <div class="card-face card-face-back">
+                            <h4 id="card-title">Wareegga 1aad</h4>
+                            <p id="card-text">Su'aashu halkan ayay ka soo muuqan doontaa...</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class="game-controls">
+                    <button class="game-btn" onclick="prevCard()">⬅️ Gadaal</button>
+                    <button class="game-btn" onclick="nextCard()">Xiga ➡️</button>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="flashlight" class="content-section">
+            <h2 style="color: var(--rose-red); margin-bottom: 20px; font-family: 'Georgia', serif; font-style: italic;">Iftiinka Noloshayda 🌑🔦</h2>
+            
+            <div class="flashlight-wrapper" id="flash-container">
+                
+                <div class="hidden-glow-message">
+                    <h3>"Sida aad shaashaddan u iftiimisay, ayaad u iftiimisay noloshayda Xamdi. Waan ku jeclahay! ❤️"</h3>
+                </div>
+                
+                <div class="flashlight-overlay" id="flash-overlay">
+                    <p class="flashlight-instruction">"Qalbigaygu mugdi buu ahaa inta aadan iman... Farta mari si aad u iftiimiso!"</p>
+                </div>
+                
+            </div>
+        </section>
+
+
+<section id="puzzle" class="content-section puzzle-section">
+            <h2 style="color: var(--rose-red); margin-bottom: 10px; font-family: 'Georgia', serif; font-style: italic;">Hal-Xiraalaheena 🧩❤️</h2>
+            <p style="color: #666; margin-bottom: 25px; font-style: italic;">"Macan badanteyda, taabo hal qayb kadibna taabo mid kale si ay boosaska isugu beddelaan. Markaad dhammaystirto, taabo batoonka Hubinta!"</p>
+            
+            <div class="puzzle-board" id="puzzle-board">
+                </div>
+            
+            <button id="verify-puzzle-btn" class="verify-btn" onclick="verifyPuzzle()">Hubi Sawirka ✔️</button>
+            
+            <p id="puzzle-error">Wali ma dhammaystirmin, isku day mar kale! 🔄</p>
+
+            <div id="puzzle-success-msg">
+                <h3>"Sida sawirkan u dhammaystirmay, ayaad noloshayda u dhammaystirtay Xamdi! Waan ku jeclahay! 💖✨"</h3>
+            </div>
+            
+            <canvas id="confetti-canvas"></canvas>
+        </section>
+
+
+
+        <section id="vault" class="content-section vault-section">
+            <h2 style="color: var(--rose-red); margin-bottom: 10px; font-family: 'Georgia', serif; font-style: italic;">Qasnadda Sirta ah 🔐</h2>
+            <p style="color: #666; margin-bottom: 25px; font-style: italic;">"Si aad u furto hadiyaddan, geli 4-ta lambar ee taariikhdii aan barta Instagram ku isku barannay (Maalinta & Bisha)..."</p>
+            
+            <div id="safe-box" class="vault-container">
+                <div id="vault-display" class="vault-display">_ _ _ _</div>
+                
+                <div class="keypad">
+                    <button class="key-btn" onclick="pressKey('1')">1</button>
+                    <button class="key-btn" onclick="pressKey('2')">2</button>
+                    <button class="key-btn" onclick="pressKey('3')">3</button>
+                    <button class="key-btn" onclick="pressKey('4')">4</button>
+                    <button class="key-btn" onclick="pressKey('5')">5</button>
+                    <button class="key-btn" onclick="pressKey('6')">6</button>
+                    <button class="key-btn" onclick="pressKey('7')">7</button>
+                    <button class="key-btn" onclick="pressKey('8')">8</button>
+                    <button class="key-btn" onclick="pressKey('9')">9</button>
+                    <button class="key-btn action-btn" onclick="clearVault()">TIRTIR</button>
+                    <button class="key-btn" onclick="pressKey('0')">0</button>
+                    <button class="key-btn action-btn enter" onclick="checkVault()">FURA</button>
+                </div>
+            </div>
+
+            <div id="love-contract" class="love-contract">
+                <h3 class="contract-title">Heshiiska Jacaylka ee Abid</h3>
+                <div class="contract-body">
+                    Anigoo ah <strong>Xamdi (Janogasho)</strong>, waxaan halkan ku caddaynayaa in:<br><br>
+                    1. Qalbigayga uu si buuxda u degay <strong>Amiin</strong>.<br>
+                    2. Aan aqbalay dhammaan jacaylkiisa, daryeelkiisa, iyo kaftankiisa.<br>
+                    3. Aan u ballan-qaadayo in aan garab taagnaado xaalad kasta.<br><br>
+                    <em>Heshiiskan dib loogama laaban karo, wuxuuna shaqaynayaa inta nolosha nooga dhiman!</em>
+                </div>
+                <div class="signature-area">
+                    <div>Saxiixa Amiin:<br><strong><em>Janogale ✍️</em></strong></div>
+                    <div id="her-signature">
+                        <button class="sign-btn" onclick="signContract()">Waan Saxiixay ✍️</button>
+                    </div>
+                </div>
+            </div>
+            
+            <canvas id="stars-canvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; display: none;"></canvas>
+        </section>
+
+      <section id="wheel" class="content-section wheel-section" style="display: none;">
+            <h2 style="color: var(--rose-red); margin-bottom: 10px; font-family: 'Georgia', serif; font-style: italic;">Shaagga Nasiibka 🎡❤️</h2>
+            <p style="color: #666; margin-bottom: 20px; font-style: italic;">"Boqoradaydii, guji batoonka 'Wareeji' si aad u ogaato waxa caawa nasiibkaagu yahay!"</p>
+            
+            <div class="wheel-container">
+                <div class="wheel-pointer"></div>
+                <canvas id="wheel-canvas" width="300" height="300"></canvas>
+            </div>
+            
+            <button id="spin-btn" class="spin-btn" onclick="spinWheel()">Wareeji 🌀</button>
+
+            <div id="wheel-result">
+                <h3 id="wheel-result-text">Natiijada halkan ayay ka soo bixi doontaa!</h3>
+            </div>
+        </section>
+
+        <section id="truth-dare" class="content-section td-section">
+            <h2 style="color: var(--rose-red); margin-bottom: 10px; font-family: 'Georgia', serif; font-style: italic;">Ciyaarta Quluubta 🎭</h2>
+            <p style="color: #666; margin-bottom: 20px; font-style: italic;">"Xamdi, dooro midkood. Hubi in aad si daacad ah uga jawaabto ama aad fuliso shuruudda!"</p>
+            
+            <div class="td-container">
+                <div class="td-card card-truth" onclick="playTD('truth')">
+                    <div class="td-icon">😇</div>
+                    <h3 class="td-title">RUN</h3>
+                    <p style="margin-top: 15px; opacity: 0.9;">Su'aal Sir ah</p>
+                </div>
+
+                <div class="td-card card-dare" onclick="playTD('dare')">
+                    <div class="td-icon">🔥</div>
+                    <h3 class="td-title">DHIIRANAAN</h3>
+                    <p style="margin-top: 15px; opacity: 0.9;">Dalab iyo Ficil</p>
+                </div>
+            </div>
+
+            <div id="td-modal" class="td-modal">
+                <div class="td-modal-content" id="td-modal-content">
+                    <span class="td-close" onclick="closeTDModal()">✖</span>
+                    <div id="td-result-type" class="td-result-type">Natiijada</div>
+                    <div id="td-result-text" class="td-result-text">Halkan ayay su'aashu ka soo bixi doontaa...</div>
+                    <button class="td-btn-again" onclick="closeTDModal()">Waan Aqbalay ✔️</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer id="main-footer" style="display: none;">
+        <h3>"Xamdi, adiga ayaa iftiimiyay noloshayda."</h3>
+        <div class="footer-heart">❤️</div>
+        <p>Laba sano waa bilow oo kaliya. Sannado badan oo farxad leh ayaa inoo dhiman.</p>
+        <p style="margin-top: 20px; font-size: 0.9rem;">Designed with infinite love by <strong>Amiin Janogale</strong> <br> For his beautiful <strong>Xamdi janogasho</strong> | March 15, 2026</p>
+    </footer>
+
+    <script>
+        // 1. Login Logic
+        function checkLogin() {
+            const user = document.getElementById('username').value.trim().toLowerCase();
+            const pass = document.getElementById('password').value.trim().toLowerCase();
+            
+            if (user === 'amiin' && pass === 'xamdi2026') {
+                document.getElementById('login-screen').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('login-screen').style.display = 'none';
+                    document.getElementById('main-app').style.display = 'block';
+                    document.getElementById('main-footer').style.display = 'block';
+                    document.getElementById('bg-music').play().catch(e => console.log("Audio play blocked until user interaction"));
+                    generateHearts();
+                }, 1000);
+            } else {
+                alert('Username-ka ama Password-ka waa khalad. Fadlan isku day markale.');
+            }
+        }
+
+        // 2. Tab Menu Navigation
+        function openTab(tabId, btn) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(sec => sec.classList.remove('active'));
+            
+            // Remove active class from all buttons
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(b => b.classList.remove('active'));
+
+            // Show selected tab and highlight button
+            document.getElementById(tabId).classList.add('active');
+            btn.classList.add('active');
+        }
+
+        // 3. Surprise Section Scenes
+        function showScene(sceneType) {
+            document.getElementById('surprise-menu').style.display = 'none';
+            if (sceneType === 'flower') {
+                document.getElementById('flower-scene').style.display = 'flex';
+                // Reset animation by re-triggering it
+                const flowers = document.querySelector('.flower-container');
+                flowers.style.display = 'none';
+                setTimeout(() => { flowers.style.display = 'flex'; }, 50);
+            } else if (sceneType === 'letter') {
+                document.getElementById('letter-scene').style.display = 'flex';
+            }
+        }
+
+        function backToSurprise() {
+            document.getElementById('flower-scene').style.display = 'none';
+            document.getElementById('letter-scene').style.display = 'none';
+            document.getElementById('surprise-menu').style.display = 'block';
+        }
+
+        // 4. Floating Hearts Generator
+        function generateHearts() {
+            const symbols = ['❤️', '✨', '🌸'];
+            setInterval(() => {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                particle.innerText = symbols[Math.floor(Math.random() * symbols.length)];
+                particle.style.left = Math.random() * 100 + 'vw';
+                particle.style.fontSize = (Math.random() * 20 + 15) + 'px';
+                particle.style.animationDuration = (Math.random() * 5 + 7) + 's';
+                document.body.appendChild(particle);
+                setTimeout(() => { particle.remove(); }, 12000);
+            }, 800);
+        }
+
+
+        // Xisaabiyaha Waqtiga (Countdown Timer) ilaa March 15, 2026
+        const targetDate = new Date("March 15, 2026 00:00:00").getTime();
+
+        function updateTimer() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            // Hubi in ay IDs-ka (c-days, c-hours) ay ku jiraan HTML-ka
+            const daysEl = document.getElementById("c-days");
+            const hoursEl = document.getElementById("c-hours");
+            const minsEl = document.getElementById("c-mins");
+            const secsEl = document.getElementById("c-secs");
+
+            if (daysEl && distance > 0) {
+                let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Geli Nambarada (Qaybta soo muuqanaysa)
+                daysEl.innerText = days;
+                hoursEl.innerText = hours;
+                minsEl.innerText = minutes;
+                secsEl.innerText = seconds;
+            } else if (daysEl && distance <= 0) {
+                // Haddii waqtigii la gaaray (15 March) waa in ay joogsadaan
+                daysEl.innerText = "0";
+                hoursEl.innerText = "0";
+                minsEl.innerText = "0";
+                secsEl.innerText = "0";
+            }
+        }
+
+        // Isla markiiba bilow si uusan u muujin "0"
+        updateTimer();
+        
+        // Ilbiriqsi kasta ha socdo (1000 milliseconds = 1 second)
+        setInterval(updateTimer, 1000);
+
+        // ==========================================
+        // ANIMATION-KA WADNAHA (MAGIC HEART CANVAS)
+        // ==========================================
+        const canvas = document.getElementById('heartCanvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        let animationStarted = false;
+
+        function resizeCanvas() {
+            canvas.width = canvas.parentElement.clientWidth || window.innerWidth;
+            canvas.height = 500;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        function createHeartParticles() {
+            particles = [];
+            const numParticles = 400; // Tirada wadneyaasha yaryar
+            
+            for (let i = 0; i < numParticles; i++) {
+                // Xisaabta qaabka Wadnaha (Heart Equation)
+                let t = Math.PI * 2 * i / numParticles;
+                let r = 12; // Cabbirka wadnaha weyn
+                let targetX = r * 16 * Math.pow(Math.sin(t), 3);
+                let targetY = -r * (13 * Math.cos(t) - 5 * Math.cos(2*t) - 2 * Math.cos(3*t) - Math.cos(4*t));
+                
+                // Soo dejinta bartamaha shaashadda
+                targetX += canvas.width / 2;
+                targetY += canvas.height / 2 - 30;
+
+                // Meesha ay ka soo bilaabanayaan (Dhulka ayay daadsan yihiin)
+                let startX = (Math.random() * canvas.width);
+                let startY = canvas.height + (Math.random() * 300); // Shaashadda hoosteeda
+
+                particles.push({
+                    x: startX,
+                    y: startY,
+                    targetX: targetX,
+                    targetY: targetY,
+                    size: Math.random() * 12 + 8, // Cabbirka love-ka yar
+                    speed: Math.random() * 0.03 + 0.01, // Xawaaraha ay ku soo kacayaan
+                    delay: Math.random() * 100 // Dib-u-dhac yar si aysan mar qura u wada kicin
+                });
+            }
+        }
+
+        function animateHeart() {
+            requestAnimationFrame(animateHeart);
+            // Nadiifinta shaashadda iyo ka dhigista madow khafiif ah (Trailing effect)
+            ctx.fillStyle = 'rgba(5, 5, 5, 0.2)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            particles.forEach((p) => {
+                if (p.delay > 0) {
+                    p.delay -= 1;
+                } else {
+                    // Wadneyaasha yaryar waxay u dhaqaaqayaan booskooda saxda ah (Wadnaha weyn)
+                    p.x += (p.targetX - p.x) * p.speed;
+                    p.y += (p.targetY - p.y) * p.speed;
+                }
+
+                // Sawiridda "Love" yaryar halkii lagu sawiri lahaa dhibco
+                ctx.font = p.size + "px Arial";
+                ctx.fillStyle = "#ff1493";
+                ctx.shadowBlur = 10;
+                ctx.shadowColor = "#ff007f";
+                ctx.fillText("❤", p.x, p.y);
+            });
+        }
+
+        // Sameynta Qoraalka Wareegaya (3D Ring Text)
+        function createRingText() {
+            const text = "Noloshayda Janogasho • Sannad Guuro Wacan • Waan Ku Jeclahay • ";
+            const ringTextElement = document.getElementById('ring-text');
+            ringTextElement.innerHTML = ''; // Nadiifi marka hore
+            
+            const radius = 150; // Wareegga goobada
+            const letters = text.split('');
+            const angleStep = 360 / letters.length;
+
+            letters.forEach((char, index) => {
+                const span = document.createElement('span');
+                span.innerText = char;
+                // Wareejinta xaraf kasta
+                span.style.transform = `rotateZ(${index * angleStep}deg) translateY(-${radius}px)`;
+                ringTextElement.appendChild(span);
+            });
+        }
+
+        // Ku xir shaqada batoonka Navigation-ka si animation-ka u bilowdo marka la furo
+        const originalOpenTab = window.openTab;
+        window.openTab = function(tabId, btn) {
+            originalOpenTab(tabId, btn);
+            if (tabId === 'magic-heart' && !animationStarted) {
+                resizeCanvas();
+                createHeartParticles();
+                createRingText();
+                animateHeart();
+                animationStarted = true;
+            }
+        };
+
+        // 2. Tab Menu Navigation oo Quful leh
+        function openTab(tabId, btn) {
+            // Hubi haddii batoonku xiran yahay
+            if (btn.classList.contains('locked')) {
+                const timeStr = btn.getAttribute('data-time');
+                const unlockDate = new Date(timeStr);
+                
+                // Fariin macaan oo u soo baxaysa marka ay isku daydo in ay furto qayb xiran
+                alert("Macaan badanteyda Janogasho, qaybtan weli lama gaarin waqtigeedii! 🙈❤️\n\nDulqaad yeelo xayati, waxay kuu furmi doontaa:\n" + unlockDate.toLocaleString());
+                return; // Jooji inuu furmo
+            }
+
+            // Haddii uu furan yahay, sii wad sidii caadiga ahayd
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(sec => sec.classList.remove('active'));
+            
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(b => b.classList.remove('active'));
+
+            document.getElementById(tabId).classList.add('active');
+            btn.classList.add('active');
+        }
+
+        // Xisaabiyaha hubinaya furitaanka Qufulada (Seconds kasta)
+        function checkLocks() {
+            const now = new Date().getTime();
+            const buttons = document.querySelectorAll('.nav-btn.locked');
+            
+            buttons.forEach(btn => {
+                const unlockTimeStr = btn.getAttribute('data-time');
+                if (unlockTimeStr) {
+                    const unlockTime = new Date(unlockTimeStr).getTime();
+                    if (now >= unlockTime) {
+                        // Waqtigii waa la gaaray! Fur qufulka.
+                        btn.classList.remove('locked');
+                        btn.innerHTML = btn.innerHTML.replace('🔒 ', ''); // Tirtir astaanta qufulka
+                        btn.removeAttribute('data-time'); // Ka saar waqtiga si uusan mar kale u hubin
+                    }
+                }
+            });
+        }
+        
+        // Isla markiiba hubi marka website-ka la furo
+        checkLocks();
+        // Sii hubi ilbiriqsi kasta
+        setInterval(checkLocks, 1000);
+
+
+// 2. Xisaabinta inta maalmood ee la wada socday ilaa 15 March 2024 (Count-up)
+            const startDate = new Date("March 15, 2024 00:00:00").getTime();
+            const nowTime = new Date().getTime();
+            const timeTogether = nowTime - startDate;
+            const tDaysEl = document.getElementById("t-days");
+            
+            if (tDaysEl && timeTogether > 0) {
+                tDaysEl.innerText = Math.floor(timeTogether / (1000 * 60 * 60 * 24));
+            }
+        // FIIRO GAAR AH: Calaamadan "}" waa muhiim, waxay xiraysaa function-ka updateTimer()
+
+        // Koodhka socodsiinaya
+        updateTimer();
+        setInterval(updateTimer, 1000);
+
+        // ==========================================
+        // MASHIINKA SABABAHA AAN KUU JECLAHAY
+        // ==========================================
+        const loveReasons = [
+            "Dhoolacadeyntaada ayaa maalintayda iftiimisa oo i illowsiisa murugo kasta. ☀️",
+            "Dulqaadkaaga iyo naxariistaada aan dhammaadka lahayn ee aad iigu deeqday. ❤️",
+            "Sida aad ii fahamto xitaa markaan waxba dhihin, indhahayga ayaad wax ka akhridaa. 👀",
+            "Inaad tahay qofka keliya ee qalbigayga degan, furahiisana gacanta ku haysa. 🗝️🫀",
+            "Sida aad iiga farxiso maalmaha aan ugu daalka badanahay. 🥰",
+            "Indhahaaga quruxda badan ee aan aduunka oo dhan ka dhex arko markaan eego. 🌍✨",
+            "Codkaaga macaan oo ah muusigga ugu macaan ee dhegahaygu maqlaan. 🎶",
+            "Kalsoonida aad i siisay iyo sida aad mar walba iigu dhiirigeliso inaan horumar gaaro. 🚀",
+            "Inaad tahay saaxiibtayda ugu dhow, sir-haystayda, iyo jaceylkayga dhabta ah. 🫂",
+            "Qosolkaaga oo ah daawada naftayda dejisa markaan isku dhex yaaco. 😂💖",
+            "Sida aad ii jeceshahay si shuruud la'aan ah, iguna ogolaatay inaan qalbigaaga dego. 💯",
+            "Wajigaaga nuuraya oo aanan waligay ka dhergin eegistiisa m.a. 🌙",
+            "Niyaddaada wanaagsan iyo qalbigaaga nadiifka ah ee aan xumaanta aqoon. 🤍",
+            "Sida aad nolosheyda macno cusub ugu yeeshay labadan sano ee aan wada socono. 🎊",
+            "Xusuusaha quruxda badan ee aan wada dhisnay iyo kuwa inoo dhiman I.A. 📸",
+            "Inaad tahay boqoradda riyooyinkayga oo dhab noqotay. 👸👑",
+            "Dareenka nabadeed iyo xasiloonida aan dareemo markaan agtaada joogo. 🕊️",
+            "Ixtiraamka iyo qadarinta aad ii hayso mar walba, taas oo i dareensiisa inaan ahay boqor. 🤴",
+            "Sida aad u daryeesho dareenkayga oo aadan waligaa raali ka ahayn inaan xumaado. 🥺",
+            "Inaad tahay hooyada mustaqbalka ee aan carruurtayda la jecelahay I.A. 👶❤️",
+            "Sida aad u garato waxa aan jeclahay iyo waxa aan dhibsado adigoon i weydiin. 🧠",
+            "Xamdi, waxaad tahay mucjiso Alle i siiyay, waana ku shukriyaa maalin walba. Alx! 🤲💖"
+        ];
+
+        let lastReasonIndex = -1;
+
+        function generateReason() {
+            const display = document.getElementById('reason-display');
+            
+            // Yaree muuqaalka qoraalka (Fade out)
+            display.style.opacity = 0;
+            
+            setTimeout(() => {
+                let randomIndex;
+                // Hubi inaysan sababtu isku noq-noqon laba jeer oo is xigta
+                do {
+                    randomIndex = Math.floor(Math.random() * loveReasons.length);
+                } while (randomIndex === lastReasonIndex);
+                
+                lastReasonIndex = randomIndex;
+                
+                // Soo bandhig sababta cusub
+                display.innerHTML = `<span style="color: var(--rose-red); font-size: 1.3rem;">Sababta ${(randomIndex + 1)}aad:</span><br><br>${loveReasons[randomIndex]}`;
+                
+                // Soo celi muuqaalka qoraalka (Fade in)
+                display.style.opacity = 1;
+            }, 400); // 0.4 ilbiriqsi kadib ayuu soo baxayaa
+        }
+
+        // ==========================================
+        // CIYAARTA QUIZ-KA (COUPLES QUIZ)
+        // ==========================================
+        const quizData = [
+            { q: "Goorma ayay bilaabatay sheekadeenna?", options: ["30 March", "15 March", "20 March", "10 March"], ans: 1 },
+            { q: "Meesha aan ugu jecelahay inaan waqti ku qaato waa?", options: ["Adiga agtaada", "Maqaaxi shaah", "Goobta shaqada", "Xeebta"], ans: 0 },
+            { q: "Maxaan sameeyaa marka aan xanaaq dareemo?", options: ["Aamusaa", "Socod u baxaa", "Sheekaa kula bilaabaa", "Music dhageystaa"], ans: 0 },
+            { q: "Cuntada aan aad u jeclahay waa?", options: ["Bariis", "Baasto", "Kalluun", "Laxoox"], ans: 2 },
+            { q: "Kee baan ugu jecelahay kawan?", options: ["Qosolkaaga", "Daryeelkaaga", "Daacadnimadaada", "Indhahaaga"], ans: 1 },
+            { q: "Goorma ayaan ugu faraxsanahay?", options: ["Markaan shaqeeyo", "Markaan kula joogo", "Markaan safar galo", "Markaan kaligay ahay"], ans: 1 },
+            { q: "Halkee bay ahayd meeshii ugu horaysay ee aan ku kulano?", options: ["Masalla view", "Suuqa hoose", "MEGA PLAZA", "Midna"], ans: 2 },
+            { q: "Riyadayda mustaqbalka waa?", options: ["Ganacsi weyn", "Qoys qurux badan", "Safarro badan", "Guryo Badan"], ans: 1 },
+            { q: "Magacan yaa ii bixiyey 'Janogale'?", options: ["Xamdi", "Hooyo", "Abti", "Amiin"], ans: 0 },
+            { q: "Su’aasha ugu dambeysa ❤️\nYaa qalbigeyga leh?", options: ["Xamdi", "Xamdi", "Xamdi", "Dhammaan jawaabaha"], ans: 3 }
+        ];
+
+        let currentQ = 0;
+        let score = 0;
+
+        function loadQuestion() {
+            if (currentQ >= quizData.length) {
+                showResults();
+                return;
+            }
+            
+            const qData = quizData[currentQ];
+            document.getElementById('q-text').innerText = (currentQ + 1) + ". " + qData.q;
+            document.getElementById('q-counter').innerText = `Su'aasha ${currentQ + 1}/10`;
+            document.getElementById('score-tracker').innerText = `Dhibcaha: ${score}`;
+            
+            const optionsBox = document.getElementById('options-box');
+            optionsBox.innerHTML = ''; // Nadiifi su'aashii hore
+            
+            const letters = ["A", "B", "C", "D"];
+            qData.options.forEach((opt, index) => {
+                const btn = document.createElement('button');
+                btn.className = 'option-btn';
+                btn.innerText = `${letters[index]}. ${opt}`;
+                btn.onclick = () => checkAnswer(index, btn);
+                optionsBox.appendChild(btn);
+            });
+        }
+
+        function checkAnswer(selectedIndex, btn) {
+            // Xir batoonada marka la doorto
+            const buttons = document.querySelectorAll('.option-btn');
+            buttons.forEach(b => b.disabled = true);
+            
+            const correctIndex = quizData[currentQ].ans;
+            
+            if (selectedIndex === correctIndex) {
+                btn.classList.add('correct');
+                score++;
+                document.getElementById('score-tracker').innerText = `Dhibcaha: ${score}`;
+                popHeartAnimation(btn); // Wadnaha soo boodaya
+            } else {
+                btn.classList.add('wrong');
+                buttons[correctIndex].classList.add('correct'); // Tus jawaabta saxda ah
+            }
+            
+            // Sug hal ilbiriqsi ka dib u gudub su'aasha xigta
+            setTimeout(() => {
+                currentQ++;
+                loadQuestion();
+            }, 1200);
+        }
+
+        function popHeartAnimation(element) {
+            const heart = document.createElement('div');
+            heart.innerHTML = '❤️';
+            heart.className = 'heart-popup';
+            
+            // Xisaabi meesha uu ku yaallo batoonka la riixay
+            const rect = element.getBoundingClientRect();
+            const containerRect = document.getElementById('quiz-box').getBoundingClientRect();
+            
+            heart.style.left = (rect.left - containerRect.left + rect.width / 2 - 20) + 'px';
+            heart.style.top = (rect.top - containerRect.top - 20) + 'px';
+            heart.style.animation = 'floatHeartPop 1s ease-out forwards';
+            
+            document.getElementById('quiz-box').appendChild(heart);
+            setTimeout(() => heart.remove(), 1000); // Tirtir animation-ka kadib
+        }
+
+        function showResults() {
+            document.getElementById('quiz-header').style.display = 'none';
+            document.getElementById('question-container').style.display = 'none';
+            
+            const resultBox = document.getElementById('quiz-result');
+            resultBox.style.display = 'block';
+            
+            // Xisaabi Natiijada
+            const percentage = Math.round((score / quizData.length) * 100);
+            document.getElementById('final-score').innerText = percentage + '%';
+            
+            const titleEl = document.getElementById('result-title');
+            const msgEl = document.getElementById('result-msg');
+            
+            // Fariimaha Natiijada oo Romantic ah
+            if (percentage === 100) {
+                titleEl.innerText = "Wow! You know Amiin 100%! 🏆❤️";
+                msgEl.innerText = "Masha'Allah! Si fiican ayaad ii taqaanaa Janogasho. Qalbigayga adiga uun baa degan, waxaadna xaqiijisay inaan isku dhalanay! Waan ku jeclahay xayatii! 😘";
+            } else if (percentage >= 70) {
+                titleEl.innerText = "Cajiib! You know Amiin " + percentage + "%! 😍";
+                msgEl.innerText = "Aad baad ii taqaanaa Babe! Xusuus fiican ayaad leedahay. Waxaan rajaynayaa inaan boqolkiiba boqol nolosha isku barano mustaqbalka. 💕";
+            } else {
+                titleEl.innerText = "You know Amiin " + percentage + "%! 🙈";
+                msgEl.innerText = "Qalad malaha xayati, muhiimadu waa jaceylka weyn ee inaga dhexeeya. Weligeen waan is baran doonnaa maalin kasta in ka sii badan I.A! 🫂❤️";
+            }
+        }
+
+        function resetQuiz() {
+            currentQ = 0;
+            score = 0;
+            document.getElementById('quiz-header').style.display = 'flex';
+            document.getElementById('question-container').style.display = 'block';
+            document.getElementById('quiz-result').style.display = 'none';
+            loadQuestion();
+        }
+
+        // Isla markiiba sii diyaari su'aasha ugu horreysa
+        loadQuestion();
+
+
+        // ==========================================
+        // SAXIIXA HESHIISKA & CONFETTI ANIMATION
+        // ==========================================
+        function acceptContract() {
+            // Qari batoonka, soo saar fariinta guusha
+            document.getElementById('btn-accept').style.display = 'none';
+            document.getElementById('contract-success').style.display = 'block';
+            
+            // Fariin yar oo qosol ah oo soo boodaysa
+            setTimeout(() => {
+                alert("Saxiixu wuu dhammaaday! Hadda wixii ka dambeeya sharci ahaan anigaa ku leh! 🥰❤️");
+            }, 500);
+
+            // Samee Waraaqaha Da'aya (Confetti Explosion)
+            const colors = ['#ff1493', '#ff69b4', '#ffd700', '#32cd32', '#00bfff', '#ff4500'];
+            
+            for (let i = 0; i < 150; i++) {
+                const confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+                
+                // Meelaha ay ka soo dhacayaan (Random positions)
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                
+                // Xawaaraha iyo leex-leexadka
+                confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                confetti.style.animationDelay = (Math.random() * 1) + 's';
+                
+                document.body.appendChild(confetti);
+
+                // Nadiifi shaashadda marka ay dhulka ku dhacaan
+                setTimeout(() => confetti.remove(), 5000);
+            }
+        }
+
+
+        // ==========================================
+        // WARQADAHA "FUR MARKAAD..." (OPEN WHEN)
+        // ==========================================
+        const lettersData = [
+            { // 0
+                title: "Markaad Ii Xiisto... 🥺❤️",
+                body: "Iftiinki noloshayday Janogasho, waan ogahay inay adag tahay fogaantu mararka qaar, balse ogow in ilbiriqsi kasta aan adiga kaa fikirayo. Indhaha xir, xusuuso laabtii iyo qosolkeenii, ogowna in qalbigaygu ku ag joogo. Waan is arki doonnaa dhawaan I.A. Aad baan kuu jeclahay!"
+            },
+            { // 1
+                title: "Markaad Iga Xanaaqsan Tahay... 🙈💔",
+                body: "Waan iska garanayaa inaan mararka qaar wax qaso oo aan ka xanaajiyo! Laakiin xanaaqan yari miyuu iga dabooli karaa jaceylka weyn ee aad ii qabto? Waan ka xumahay xayati, ii dhoola cadee hadda, waan ku baryayaaye! Adiga la'aantaa ma noolaan karo. I cafi macaanteyda! 🥺🫂"
+            },
+            { // 2
+                title: "Markaad Jaceylkayga ka Shakiso... 🤔💖",
+                body: "Sideed ugu fikiri kartaa sidaas Janogasho? Waxaad tahay neefta aan qaato, nuurka indhahayga. Haddii aan kun jeer dhasho, kun jeer adigaan ku dooran lahaa. Qalbigayga iyo naftayda adigaa leh ilaa abid, cid kalena booskaaga ma geli karto weligeed!"
+            },
+            { // 3
+                title: "Markaad U Baahan Tahay Qosol... 😂✨",
+                body: "Macaan badaney, xusuuso waqtiyadii aan isku dhex yaacayay markaan kula hadlo bilowgii! 😂 Ama xusuuso qosolkaaga quruxda badan ee sankaaga yar qaloociya markaad faraxsan tahay! Qosolkaagu waa dawadayda, fadlan iigu deeq hal dhoolacadeyn hadda!"
+            },
+            { // 4
+                title: "Markaad Daalan Tahay Ama Murugsan Tahay... 💆‍♀️🤍",
+                body: "Nasasho qaado boqoradeydiyey. Adduunka wax walba waa fudeed, adigaa wax walba iiga muhiimsan. Neefso si qoto dheer, indhaha isku qabo, ogowna inaan halkan kula joogo oo aan garbaha kuu duugayo oo aan ku daryeelo. Tan waad ka  gudbi doontaa, I got you! 🫂"
+            },
+            { // 5
+                title: "Markaad U Baahan Tahay Laabtayda (Hug)... 🫂❤️",
+                body: "Isku soo duub naftaada aad waliba... Qiyaas in gacmahaygu ay yihiin kuwa kugu duuban xilligan. Waan ku dhex dhuuman lahaa qoortaada hadda oo aan ku dhihi lahaa 'Waan Ku Jeclahay'. Uuuuumc laab diiran oo weyn iga guddoon xayati!"
+            },
+            { // 6
+                title: "Markaad Xanuunsanayso... 🤒🍲",
+                body: "Kaalay aan ku xannaaneeyee xayati. Cunto kulul, shaah macaan, iyo laab diiran ayaan kuu hayaa. Aad baan uga murugoodaa markaan maqlo inaad xanuunsanayso. Illaahay ha ku caafiyo nuurka indhahaygay, is daryeel xppi macaan. 🤲❤️"
+            },
+            { // 7
+                title: "Markaad Guul Weyn Gaarto... 🏆🎉",
+                body: "Masha'Allah! Waan ogaa inaad samayn karto! Aad iyo aad baan kuugu faanayaa Janogasho. Waxaad tahay gabadha ugu caqliga badan, ugu dadaalka badan. Guushani waa bilow, waxaanan halkan u joogaa inaan u sacab tumo guul kasta oo aad gaarto nolosha. Hambalyo! 🎊😘"
+            }
+        ];
+
+        function openLetter(index) {
+            const data = lettersData[index];
+            document.getElementById('letter-title').innerText = data.title;
+            document.getElementById('letter-body').innerText = data.body;
+            document.getElementById('letter-modal').style.display = 'flex';
+        }
+
+        function closeLetter() {
+            document.getElementById('letter-modal').style.display = 'none';
+        }
+
+        // ==========================================
+        // FARIINTA CODKA (VOICE NOTE PLAYER)
+        // ==========================================
+        let isVoicePlaying = false;
+        
+        function toggleVoiceNote() {
+            const audio = document.getElementById('myAudioMessage');
+            const btn = document.getElementById('playPauseBtn');
+            const waves = document.getElementById('waves');
+            
+            if (isVoicePlaying) {
+                // Haddii uu socdo, hakad geli (Pause)
+                audio.pause();
+                btn.innerHTML = '▶️'; // Astaanta Play
+                waves.classList.remove('playing'); // Jooji hirarka
+                isVoicePlaying = false;
+            } else {
+                // Haddii uu xiran yahay, shid (Play)
+                audio.play().catch(e => {
+                    alert("Fadlan hubi in file-ka codku ('codkayga.mp3') uu ku jiro galka website-ka.");
+                });
+                btn.innerHTML = '⏸️'; // Astaanta Pause
+                waves.classList.add('playing'); // Dhaqaaji hirarka
+                isVoicePlaying = true;
+            }
+        }
+        
+        // Marka codku dhamaado, si toos ah u jooji hirarka
+        function audioEnded() {
+            const btn = document.getElementById('playPauseBtn');
+            const waves = document.getElementById('waves');
+            btn.innerHTML = '▶️';
+            waves.classList.remove('playing');
+            isVoicePlaying = false;
+        }
+
+
+        // ==========================================
+        // CIYAARTA XUSUUSTA (3D MEMORY GAME)
+        // ==========================================
+        const memoryCards = [
+            {
+                title: "Bilowgii Macaanaa 🌙",
+                text: "Aan kuu sheego, habeenadii Ramadaanka markaan sarbeebta 'أنا صاحبك بغير صاد' kuu soo diray, aad baan u sugayay inaad fahanto... Adiguna iiga sheekee, maxaad dareentay markii aad macnaheeda dhabta ah garatay maalin iyo badh kadib?"
+            },
+            {
+                title: "Kulankii Indhaha 👀",
+                text: "Markaan Mega Plaza nimid, ee aan idhi 'Waaba tan! Waa iyada!' dharkaagii Dambariga ahaana aan la dhacay... Adigu ii sheeg, maxaa qalbigaaga ka guuxayay ilbiriqsiyadii aan soo lugaynayay ee aan ku soo hor istaagayay?"
+            },
+            {
+                title: "Roobkii & Qosolka 🌧️",
+                text: "Aan kuu sheego, maalintii roobka xooggani nagu qabtay inagoo la soconna Huda iyo Hoodo aad baan u faraxsanaa inkastoo aan qoynay. Adiguna iiga sheekee, maxaad ka xusuusataa qosolkeenii maalintaas iyo maqaaxidii Gablalax?"
+            },
+            {
+                title: "Fogaanta & Xiisaha 🌳",
+                text: "Xusuuso maalintii aan Jaleelo aadnay aniga iyo asxaabtaydu. Markaan beerta dhex maraynay aad baan u damcay inaad ila joogto, oo Video Call baan kaa soo wacayey khadkaana diiday. Goorma ayaad adigu aad u tabtay inaan agtaada ahaado?"
+            },
+            {
+                title: "Boqoraddii Xafladda 🎓",
+                text: "Maalintii qalin-jebintayda, imaanshahaagii ayaa iftiimiyay adduunkayga oo bedelay niyad-jabkaygii. Waa maxay dareenkaagii markii ugu horraysay ee aan qoyskayga ku baray ee aad si dabiici ah u dhex-gashay?"
+            },
+            {
+                title: "Qosol & Hadiyado 🎁",
+                text: "Aan kuu sheego ceebtaydii habeenkii tuulada la igu sameeyay xafladda ee jaaska la igu qasbay! ... Adigu ii sheeg, wali ma ku adkaysanaysaa inaad jaaska i barayso si aan habeenka arooskeena u ciyaaro?"
+            },
+            {
+                title: "Riyooyinka Mustaqbalka 💍",
+                text: "Haddii aan maanta kuu dhisi lahaa guri riyo, waxaan ka dhigi lahaa mid xasiloon oo aan inagu leenahay. Adiguna iiga sheekee, sidee baad u malaynaysaa inuu noqon doono habeenkeena ugu horreeya ee gurigeena?"
+            }
+        ];
+
+        let currentCardIndex = 0;
+        const cardElement = document.getElementById('active-card');
+        const cardTitle = document.getElementById('card-title');
+        const cardText = document.getElementById('card-text');
+        const cardCounter = document.getElementById('card-counter');
+
+        // Geli qoraalka kaarka ugu horreeya marka la furo
+        function loadCardData() {
+            cardTitle.innerText = memoryCards[currentCardIndex].title;
+            cardText.innerText = memoryCards[currentCardIndex].text;
+            cardCounter.innerText = `Kaarka ${currentCardIndex + 1} / ${memoryCards.length}`;
+        }
+
+        // Dhaqaaji Kaarka (3D Flip)
+        function flipCard() {
+            cardElement.classList.toggle('is-flipped');
+        }
+
+        // Batoonka Xiga
+        function nextCard() {
+            // Haddii uu furan yahay, dib u xir marka hore
+            if (cardElement.classList.contains('is-flipped')) {
+                cardElement.classList.remove('is-flipped');
+                setTimeout(() => {
+                    currentCardIndex = (currentCardIndex + 1) % memoryCards.length;
+                    loadCardData();
+                }, 400); // Sug inta uu is-xirayo
+            } else {
+                currentCardIndex = (currentCardIndex + 1) % memoryCards.length;
+                loadCardData();
+            }
+        }
+
+        // Batoonka Gadaal
+        function prevCard() {
+            if (cardElement.classList.contains('is-flipped')) {
+                cardElement.classList.remove('is-flipped');
+                setTimeout(() => {
+                    currentCardIndex = (currentCardIndex - 1 + memoryCards.length) % memoryCards.length;
+                    loadCardData();
+                }, 400);
+            } else {
+                currentCardIndex = (currentCardIndex - 1 + memoryCards.length) % memoryCards.length;
+                loadCardData();
+            }
+        }
+
+        // Bilow shaqada kaarka
+        loadCardData();
+
+
+        // ==========================================
+        // FARIINTA MUGDIGA (DIGITAL FLASHLIGHT)
+        // ==========================================
+        const flashContainer = document.getElementById('flash-container');
+        const flashOverlay = document.getElementById('flash-overlay');
+
+        // Shaqada raadinaysa halka ay farta ama mouse-ku marayo
+        function updateFlashlight(e) {
+            // Ka ilaali in shaashaddu hoos/kor u go'do marka farta la marinayo (Mobile)
+            if (e.type === 'touchmove') {
+                e.preventDefault();
+            }
+
+            // Daar Iftiinka
+            flashOverlay.classList.add('active');
+
+            // Xisaabi booska Mouse-ka ama Farta
+            const rect = flashContainer.getBoundingClientRect();
+            let clientX = e.clientX || (e.touches && e.touches[0].clientX);
+            let clientY = e.clientY || (e.touches && e.touches[0].clientY);
+
+            let x = clientX - rect.left;
+            let y = clientY - rect.top;
+
+            // U gudbi CSS-ka si uu goobada iftiinka ula socodsiiyo farta
+            flashOverlay.style.setProperty('--cursor-x', x + 'px');
+            flashOverlay.style.setProperty('--cursor-y', y + 'px');
+        }
+
+        // Dhegeyso Mouse-ka iyo Farta (Mobile & Desktop)
+        flashContainer.addEventListener('mousemove', updateFlashlight);
+        flashContainer.addEventListener('touchmove', updateFlashlight, { passive: false });
+
+        // Marka ay farta ka qaaddo ama mouse-ku baxo, dib u madoobee
+        flashContainer.addEventListener('mouseleave', () => {
+             flashOverlay.classList.remove('active');
+        });
+        flashContainer.addEventListener('touchend', () => {
+             flashOverlay.classList.remove('active');
+        });
+
+
+// ==========================================
+        // SHAQADA KAARARKA LA XOQAYO (100% FIXED)
+        // ==========================================
+        function initScratchCards() {
+            const canvases = document.querySelectorAll('.scratch-pad');
+            
+            canvases.forEach(canvas => {
+                const ctx = canvas.getContext('2d');
+                
+                // XALKA: Sii cabbir go'an si uusan eber u noqon xitaa haddii tab-ku xiran yahay
+                canvas.width = 300;
+                canvas.height = 120;
+
+                // Samaynta Midabka Sare (Dahabi iyo Casaan isku dhex jira)
+                let gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+                gradient.addColorStop(0, "#ffd700"); // Dahabi
+                gradient.addColorStop(0.5, "#ffb6c1"); // Casaan fudud
+                gradient.addColorStop(1, "#ff8c00"); // Dahabi madow
+                
+                ctx.fillStyle = gradient; 
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                // Qoraalka dusha saaran ee caddaanka ah
+                ctx.font = 'bold 24px "Georgia", serif';
+                ctx.fillStyle = '#ffffff';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.shadowColor = "rgba(0,0,0,0.5)";
+                ctx.shadowBlur = 4;
+                ctx.fillText('✨ Xoq Halkan ✨', canvas.width / 2, canvas.height / 2);
+
+                ctx.shadowBlur = 0; // Nadiifi shadow-ga
+                let isDrawing = false;
+
+                // Xisaabi booska Mouse-ka ama Farta (Isku-dheellitirka Scale-ka taleefanka/laptop-ka)
+                function getMousePos(e) {
+                    const rect = canvas.getBoundingClientRect();
+                    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+                    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+                    
+                    const scaleX = canvas.width / rect.width;
+                    const scaleY = canvas.height / rect.height;
+                    
+                    return {
+                        x: (clientX - rect.left) * scaleX,
+                        y: (clientY - rect.top) * scaleY
+                    };
+                }
+
+                // Tirtiraha (Eraser)
+                function scratch(e) {
+                    if (!isDrawing) return;
+                    if (e.cancelable) e.preventDefault(); // Ka ilaali in shaashaddu durugto Mobile-ka
+                    
+                    const pos = getMousePos(e);
+                    ctx.globalCompositeOperation = 'destination-out';
+                    ctx.beginPath();
+                    ctx.arc(pos.x, pos.y, 18, 0, Math.PI * 2); // Cabbirka tirtiraha
+                    ctx.fill();
+                }
+
+                // Dhacdooyinka Mouse-ka (Laptop)
+                canvas.addEventListener('mousedown', (e) => { isDrawing = true; scratch(e); });
+                canvas.addEventListener('mousemove', scratch);
+                window.addEventListener('mouseup', () => isDrawing = false);
+
+                // Dhacdooyinka Taabashada (Mobile)
+                canvas.addEventListener('touchstart', (e) => { isDrawing = true; scratch(e); }, { passive: false });
+                canvas.addEventListener('touchmove', scratch, { passive: false });
+                window.addEventListener('touchend', () => isDrawing = false);
+            });
+        }
+
+        // Sug waxyar inta website-ku si buuxda u furmayo si uusan error u dhicin
+        setTimeout(initScratchCards, 500);
+
+        // ==========================================
+        // SHAQADA KHARIIDADDA WAQTIGA (TIMELINE SCROLL)
+        // ==========================================
+        function initTimeline() {
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            
+            // Intersection Observer wuxuu eegaa marka element-gu soo galo shaashadda
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    }
+                });
+            }, {
+                threshold: 0.2 // Wuxuu soo boodayaa marka 20% sanduuqa la arko
+            });
+
+            timelineItems.forEach(item => {
+                observer.observe(item);
+            });
+        }
+
+        // Isla markiiba sii shid marka website-ku furmo
+        window.addEventListener('load', initTimeline);
+
+
+          // ==========================================
+    // 1. SHAQADA TIGIDHADA (CLAIM COUPON)
+    // ==========================================
+    function claimCoupon(btn) {
+        if (!btn.classList.contains('claimed')) {
+            btn.innerHTML = '✔️ Waa La Bixiyay';
+            btn.classList.add('claimed');
+            setTimeout(() => {
+                alert("Tigidhkan waa la diiwaangeliyay xayati! Sawir ka qaado waan kuu fulin doonaa Insha'Allah. 🎉❤️");
+            }, 300);
+        }
+    }
+
+    // ==========================================
+    // 2. KAARARKA LA XOQAYO (SCRATCH CARDS)
+    // ==========================================
+    function initScratchCards() {
+        const canvases = document.querySelectorAll('.scratch-pad');
+        canvases.forEach(canvas => {
+            const ctx = canvas.getContext('2d');
+            canvas.width = 300;
+            canvas.height = 120;
+
+            let gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+            gradient.addColorStop(0, "#ffd700"); 
+            gradient.addColorStop(0.5, "#ffb6c1"); 
+            gradient.addColorStop(1, "#ff8c00"); 
+            
+            ctx.fillStyle = gradient; 
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.font = 'bold 24px "Georgia", serif';
+            ctx.fillStyle = '#ffffff';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.shadowColor = "rgba(0,0,0,0.5)";
+            ctx.shadowBlur = 4;
+            ctx.fillText('✨ Xoq Halkan ✨', canvas.width / 2, canvas.height / 2);
+            ctx.shadowBlur = 0; 
+
+            let isDrawing = false;
+
+            function getMousePos(e) {
+                const rect = canvas.getBoundingClientRect();
+                const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+                const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+                const scaleX = canvas.width / rect.width;
+                const scaleY = canvas.height / rect.height;
+                return {
+                    x: (clientX - rect.left) * scaleX,
+                    y: (clientY - rect.top) * scaleY
+                };
+            }
+
+            function scratch(e) {
+                if (!isDrawing) return;
+                if (e.cancelable) e.preventDefault(); 
+                const pos = getMousePos(e);
+                ctx.globalCompositeOperation = 'destination-out';
+                ctx.beginPath();
+                ctx.arc(pos.x, pos.y, 18, 0, Math.PI * 2); 
+                ctx.fill();
+            }
+
+            canvas.addEventListener('mousedown', (e) => { isDrawing = true; scratch(e); });
+            canvas.addEventListener('mousemove', scratch);
+            window.addEventListener('mouseup', () => isDrawing = false);
+
+            canvas.addEventListener('touchstart', (e) => { isDrawing = true; scratch(e); }, { passive: false });
+            canvas.addEventListener('touchmove', scratch, { passive: false });
+            window.addEventListener('touchend', () => isDrawing = false);
+        });
+    }
+
+    // ==========================================
+    // 3. KHARIIDADDA WAQTIGA (TIMELINE SCROLL)
+    // ==========================================
+    function initTimeline() {
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        timelineItems.forEach(item => {
+            observer.observe(item);
+        });
+    }
+
+    // ==========================================
+    // 4. HAL-XIRAALAHA SAWIRKA (PUZZLE GAME)
+    // ==========================================
+    let puzzleOrder = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+    let selectedPiece = null;
+    let isPuzzleSolved = false;
+
+    function initPuzzle() {
+        const board = document.getElementById('puzzle-board');
+        if (!board) return; 
+        board.innerHTML = ''; 
+        isPuzzleSolved = false;
+        selectedPiece = null;
+        
+        const errorMsg = document.getElementById('puzzle-error');
+        const successMsg = document.getElementById('puzzle-success-msg');
+        const verifyBtn = document.getElementById('verify-puzzle-btn');
+        
+        if(errorMsg) errorMsg.style.display = 'none';
+        if(successMsg) successMsg.style.display = 'none';
+        if(verifyBtn) verifyBtn.style.display = 'inline-block';
+        
+        board.style.border = '4px solid var(--rose-red)';
+
+        let shuffledOrder = [...puzzleOrder].sort(() => Math.random() - 0.5);
+        while(JSON.stringify(shuffledOrder) === JSON.stringify(puzzleOrder)) {
+            shuffledOrder = [...puzzleOrder].sort(() => Math.random() - 0.5);
+        }
+
+        shuffledOrder.forEach((originalIndex, currentIndex) => {
+            const piece = document.createElement('div');
+            piece.classList.add('puzzle-piece');
+            piece.dataset.originalIndex = originalIndex;
+            piece.dataset.currentIndex = currentIndex; 
+            const row = Math.floor(originalIndex / 3);
+            const col = originalIndex % 3;
+            piece.style.backgroundPosition = `-${col * 100}px -${row * 100}px`;
+            piece.addEventListener('click', () => handlePieceClick(piece));
+            board.appendChild(piece);
+        });
+    }
+
+    function handlePieceClick(piece) {
+        if (isPuzzleSolved) return; 
+        const errorMsg = document.getElementById('puzzle-error');
+        if(errorMsg) errorMsg.style.display = 'none';
+
+        if (selectedPiece === null) {
+            selectedPiece = piece;
+            piece.classList.add('selected');
+        } else {
+            const piece1 = selectedPiece;
+            const piece2 = piece;
+
+            if (piece1 === piece2) {
+                piece1.classList.remove('selected');
+                selectedPiece = null;
+                return;
+            }
+
+            const tempOriginalIndex = piece1.dataset.originalIndex;
+            const tempBgPos = piece1.style.backgroundPosition;
+            piece1.dataset.originalIndex = piece2.dataset.originalIndex;
+            piece1.style.backgroundPosition = piece2.style.backgroundPosition;
+            piece2.dataset.originalIndex = tempOriginalIndex;
+            piece2.style.backgroundPosition = tempBgPos;
+
+            piece1.classList.remove('selected');
+            selectedPiece = null;
+        }
+    }
+
+    window.verifyPuzzle = function() {
+        if (isPuzzleSolved) return;
+        const board = document.getElementById('puzzle-board');
+        const pieces = board.children; 
+        let hasWon = true;
+
+        for (let i = 0; i < pieces.length; i++) {
+            if (parseInt(pieces[i].dataset.originalIndex) !== i) {
+                hasWon = false;
+                break;
+            }
+        }
+
+        if (hasWon) {
+            isPuzzleSolved = true;
+            document.getElementById('verify-puzzle-btn').style.display = 'none';
+            document.getElementById('puzzle-error').style.display = 'none';
+            document.getElementById('puzzle-board').style.border = '4px solid #32cd32';
+            document.getElementById('puzzle-success-msg').style.display = 'block';
+            shootConfetti();
+        } else {
+            const errorMsg = document.getElementById('puzzle-error');
+            errorMsg.style.display = 'block';
+            errorMsg.style.animation = 'none';
+            setTimeout(() => errorMsg.style.animation = '', 10);
+        }
+    };
+
+    // ==========================================
+    // 5. UBAXYADA GUUSHA (CONFETTI)
+    // ==========================================
+    function shootConfetti() {
+        const canvas = document.getElementById('confetti-canvas');
+        if(!canvas) return;
+        canvas.style.display = 'block';
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const particles = [];
+        const colors = ['#ff1493', '#ff69b4', '#ffd700', '#ff0000', '#ffffff', '#8a2be2'];
+
+        for (let i = 0; i < 150; i++) {
+            particles.push({
+                x: canvas.width / 2,
+                y: canvas.height / 2 + 100,
+                r: Math.random() * 8 + 4,
+                dx: Math.random() * 20 - 10,
+                dy: Math.random() * -20 - 5,
+                color: colors[Math.floor(Math.random() * colors.length)],
+                tilt: Math.floor(Math.random() * 10) - 10,
+                tiltAngle: 0,
+                tiltAngleInc: (Math.random() * 0.07) + 0.05
+            });
+        }
+
+        function renderConfetti() {
+            if (particles.length === 0) {
+                canvas.style.display = 'none';
+                return;
+            }
+            requestAnimationFrame(renderConfetti);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let i = particles.length - 1; i >= 0; i--) {
+                const p = particles[i];
+                p.tiltAngle += p.tiltAngleInc;
+                p.y += (Math.cos(p.tiltAngle) + 1 + p.r / 2) / 2;
+                p.x += Math.sin(p.tiltAngle) * 2;
+                p.dy += 0.2; 
+                p.y += p.dy;
+                p.x += p.dx;
+                ctx.beginPath();
+                ctx.lineWidth = p.r;
+                ctx.strokeStyle = p.color;
+                ctx.moveTo(p.x + p.tilt + p.r, p.y);
+                ctx.lineTo(p.x + p.tilt, p.y + p.tilt + p.r);
+                ctx.stroke();
+                if (p.y > canvas.height) {
+                    particles.splice(i, 1);
+                }
+            }
+        }
+        renderConfetti();
+    }
+
+    // ==========================================
+    // 6. ISLA MARKIIBA SHID DHAMMAAN SHAQOOYINKA
+    // ==========================================
+    
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            if(typeof initScratchCards === 'function') initScratchCards();
+            if(typeof initTimeline === 'function') initTimeline();
+            if(typeof initPuzzle === 'function') initPuzzle();
+        }, 500);
+    });
+
+
+    // ==========================================
+    // SHAQADA QASNADDA QALBIGA (VAULT LOGIC)
+    // ==========================================
+    let vaultPin = "";
+    const correctPin = "1503"; // 15 March
+
+    // Marka ay lambar taabato
+    function pressKey(num) {
+        if (vaultPin.length < 4) {
+            vaultPin += num;
+            updateDisplay();
+        }
+    }
+
+    // Tirtir (Clear)
+    function clearVault() {
+        vaultPin = "";
+        updateDisplay();
+        document.getElementById('vault-display').classList.remove('error-shake');
+    }
+
+    // Cusbooneysii Shaashadda
+    function updateDisplay() {
+        const display = document.getElementById('vault-display');
+        // Muuji inta ay qortay, inta kalena ka dhig underscore "_"
+        let showText = vaultPin.padEnd(4, '_').split('').join(' ');
+        display.innerText = showText;
+    }
+
+    // Hubi Nambarka (Check Vault)
+    function checkVault() {
+        const display = document.getElementById('vault-display');
+        
+        if (vaultPin === correctPin) {
+            // GUUL! Fur Qasnadda
+            document.getElementById('safe-box').style.display = 'none';
+            document.getElementById('love-contract').style.display = 'block';
+            
+            // Soo saar Xiddigaha Dahabiga ah
+            shootGoldenStars();
+        } else {
+            // QALAD! Gariir shaashadda oo tirtir
+            display.classList.add('error-shake');
+            display.innerText = "Q A L A D";
+            setTimeout(() => {
+                clearVault();
+            }, 800);
+        }
+    }
+
+    // Saxiixa Heshiiska
+    function signContract() {
+        const sigArea = document.getElementById('her-signature');
+        sigArea.innerHTML = "Saxiixa Xamdi:<br><strong style='color: var(--rose-red); font-size: 1.2rem;'><em>Janogasho ✍️❤️</em></strong>";
+        setTimeout(() => {
+            alert("Hambalyo! Heshiiskii jacaylka waa la xaqiijiyay! Waan ku jeclahay xayati!");
+        }, 500);
+    }
+
+    // ==========================================
+    // XIDDIGAHA DAHABIGA AH EE QASNADDA (GOLDEN STARS)
+    // ==========================================
+    function shootGoldenStars() {
+        const canvas = document.getElementById('stars-canvas');
+        if(!canvas) return;
+        canvas.style.display = 'block';
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const stars = [];
+        
+        for (let i = 0; i < 100; i++) {
+            stars.push({
+                x: canvas.width / 2,
+                y: canvas.height / 2,
+                size: Math.random() * 10 + 5,
+                dx: Math.random() * 20 - 10,
+                dy: Math.random() * -20 - 5,
+                rot: Math.random() * Math.PI * 2,
+                rotSpeed: (Math.random() - 0.5) * 0.2
+            });
+        }
+
+        function drawStar(cx, cy, spikes, outerRadius, innerRadius, rot) {
+            let cx_pos = cx;
+            let cy_pos = cy;
+            let step = Math.PI / spikes;
+            ctx.beginPath();
+            ctx.moveTo(cx_pos + Math.cos(rot) * outerRadius, cy_pos + Math.sin(rot) * outerRadius);
+            for (let i = 0; i < spikes; i++) {
+                cx_pos = cx + Math.cos(rot) * outerRadius;
+                cy_pos = cy + Math.sin(rot) * outerRadius;
+                ctx.lineTo(cx_pos, cy_pos);
+                rot += step;
+                cx_pos = cx + Math.cos(rot) * innerRadius;
+                cy_pos = cy + Math.sin(rot) * innerRadius;
+                ctx.lineTo(cx_pos, cy_pos);
+                rot += step;
+            }
+            ctx.lineTo(cx + Math.cos(rot) * outerRadius, cy + Math.sin(rot) * outerRadius);
+            ctx.closePath();
+            ctx.fillStyle = "#ffd700"; // Dahabi
+            ctx.fill();
+        }
+
+        function renderStars() {
+            if (stars.length === 0) {
+                canvas.style.display = 'none';
+                return;
+            }
+            requestAnimationFrame(renderStars);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            for (let i = stars.length - 1; i >= 0; i--) {
+                let s = stars[i];
+                s.x += s.dx;
+                s.y += s.dy;
+                s.dy += 0.3; // Gravity
+                s.rot += s.rotSpeed;
+
+                drawStar(s.x, s.y, 5, s.size, s.size / 2, s.rot);
+
+                if (s.y > canvas.height) {
+                    stars.splice(i, 1);
+                }
+            }
+        }
+        renderStars();
+    }
+
+// ==========================================
+    // 1. NIDAAMKA BATOONADA (TAB NAVIGATION SYSTEM)
+    // ==========================================
+    function openTab(tabId, btn) {
+        // Qari dhammaan qaybaha
+        const sections = document.querySelectorAll('.content-section');
+        sections.forEach(section => {
+            section.style.display = 'none';
+        });
+
+        // Ka qaad iftiinka dhammaan batoonada
+        const navButtons = document.querySelectorAll('.nav-btn');
+        navButtons.forEach(button => {
+            button.style.transform = "scale(1)";
+            button.style.background = ""; 
+            button.style.color = "";
+        });
+
+        // Fur qaybta aad taabatay
+        const activeSection = document.getElementById(tabId);
+        if (activeSection) {
+            activeSection.style.display = 'block';
+        }
+
+        // Iftiimi batoonka aad taabatay
+        if (btn) {
+            btn.style.transform = "scale(1.05)";
+            btn.style.background = "var(--rose-red)";
+            btn.style.color = "white";
+        }
+
+        // MUHIIM: Sawir shaagga kaliya marka tab-kiisa la furo si uusan u jabin!
+        if (tabId === 'wheel') {
+            setTimeout(drawWheel, 100);
+        }
+    }
+
+    // Marka website-ku furmo, fur qaybta 1aad oo keliya
+    window.addEventListener('load', () => {
+        const sections = document.querySelectorAll('.content-section');
+        sections.forEach(section => {
+            section.style.display = 'none';
+        });
+        
+        if(sections.length > 0) {
+            sections[0].style.display = 'block';
+        }
+
+        const firstBtn = document.querySelector('.nav-btn');
+        if(firstBtn) {
+            firstBtn.style.transform = "scale(1.05)";
+            firstBtn.style.background = "var(--rose-red)";
+            firstBtn.style.color = "white";
+        }
+    });
+
+    // ==========================================
+    // 2. SHAQADA SHAAGGA NASIIBKA (WHEEL OF LOVE)
+    // ==========================================
+    const wheelOptions = [
+        "1. I weydii hal su'aal oo sir ah!",
+        "2. Codso hal Voice Note oo aan kuugu sheegayo sidaan kuu jeclahay.",
+        "3. Amaan iga dalbo, anigaa kugu daadinayee!",
+        "4. Waxaad ku guulaysatay casho bilaash ah maalinta aad doorato ayaan u baxaynaa!",
+        "5. Dalbo inaan kuu sheego sababta aan adiga kuu doortay.",
+        "6. Xasuustii MEGA PLAZA iyo Maalinkii isugu keen horaysay aan dib kaaga sheekeeyo.",
+        "7. Ii sheeg dhankaaga xasuustii maalinkii Jaleelo aan tagnay.",
+        "8. Hal balanqaad oo cusub iga dalbo caawa.",
+        "9. Password-ka taleefankayga dalbo (Haddaa rabto!).",
+        "10. I far inaan hal maanso ama gabay jacayl ah kuu tiriyo.",
+        "11. Dalxiis aan ku tagno meel aad dooratay ayaan kuu balanqaadaya.",
+        "12. Sir aanan waligay cidna u sheegin i weydii.",
+        "13. I weydii waxa ugu horreeya ee aan kugu jeclaaday.",
+        "14. I weydii Goorma ayaad iga dareentay jaceyl dhab ah!",
+        "15. Qosolkaygii ugu weynaa adigaa sabab u ahaa, i weydii goortay ahayd.",
+        "16. Iga codso inaan sameeyo hal shay oo aad jeceshahay inaan barto.",
+        "17. I weydii ardaygii iigu qosolka badnaa 5-tii sano ee aan macalinka ahaa.",
+        "18. Magac cusub oo naaneys ah iigu yeer caawa.",
+        "19. I weydii riyada ugu weyn ee aan mustaqbalkeena ka leeyahay.",
+        "20. i fiiri indhaha mudo hal minute ah!",
+        "21. Sawirkaygii iigu yaraa aan kuu soo diro caawa.",
+        "22. Waxaad caawa igu leedahay inaan hal saac ku dhegeysto adigoon aamusin.",
+        "23. I weydii markii aan ugu maseyrka badnaa.",
+        "24. I weydii heesta ikaa soo xasuusisa adiga.",
+        "25. Codso inaan ku baro hal xirfad oo aan ku fiicanahay.",
+        "26. Balanqaad inaan habeenka arooskeena jaas wada ciyaari doonno lakiin qolkeena bas yaah!",
+        "27. I weydii cabsida ugu weyn ee aan nolosha ka qabo.",
+        "28. Dalbo inaan kuu soo duubo anigoo magacaaga si macaan ugu dhawaaqaya.",
+        "29. Iga codso inaan cunto karinta barto si aan kugu kariyo mustaqbalka.",
+        "30. I weydii goortaan dareemay inaan rabo inaan kula noolaado ilaa abid.",
+        "31. Iga xanaaji 1 daqiiqo, kadibna i raali geli!",
+        "32. Dalbo inaan 5 sababood kuu sheego oo aad kaga duwan tahay dumarka kale.",
+        "33. I weydii waxa iigu farxadda badnaa maalintii qalin-jebintayda.",
+        "34. Codso hal hadiyad oo aan kadis kaga dhigo ciidda.",
+        "35. I weydii qaladaadkii aan iska saxay intii aan ku bartay.",
+        "36. Magac u bixi ilmaha curadka ah ee aan Insha'Allah isku dhalayno.",
+        "37. I weydii waxa aan ka fikiro habeenkii ka hor intaanan seexan.",
+        "38. Dalbo inaan labbiskaaga berrito anigu kuu dooro.",
+        "39. I weydii cidda aan aadka u jeclahay inaan kaaga sheekeeyo.",
+        "40. Codso inaan kaa daawado shaashadda adigoon hadlayn 2 daqiiqo.",
+        "41. I weydii dhacdo iiga kaa yaabisay.",
+        "42. I weydii sida aan isku arko 10 sano kadib inagoo wada joogna.",
+        "43. Hal eedeyn oo aad ii haysay caawa ii sheeg, waan aqbalayaa.",
+        "44. Dooro xusuus aad jeceshahay in aad iiga sheekayso!",
+        "45. Dalbo inaan u soo duceeyo qoyskaaga caawa.",
+        "46. I weydii waxa iigu adkaa ee aan u dulqaatay dartaa.",
+        "47. Codso inaan ku dhunkado si real ah ama virtual ah.",
+        "48. I weydii waxa ugu quruxda badan ee an ka arko wajigaaga.",
+        "49. Hal sifo oo aad iga beddeli lahayd ii sheeg.",
+        "50. Ku celceli inaad i jeceshahay 3 jeer si isku xigta!"
+    ];
+
+    let currentRotation = 0;
+
+    function drawWheel() {
+        const canvas = document.getElementById('wheel-canvas');
+        if(!canvas) return;
+        const ctx = canvas.getContext('2d');
+        const numSlices = 8; 
+        const sliceAngle = (2 * Math.PI) / numSlices;
+        const colors = ['#ffb6c1', '#ff69b4', '#ff1493', '#d32f2f', '#ffb6c1', '#ff69b4', '#ff1493', '#d32f2f'];
+        const emojis = ['💖', '🎁', '💌', '✨', '👑', '💍', '🌹', '🥰'];
+
+        const centerX = canvas.width / 2;
+        const centerY = canvas.height / 2;
+        const radius = centerX;
+
+        for (let i = 0; i < numSlices; i++) {
+            const startAngle = i * sliceAngle;
+            const endAngle = startAngle + sliceAngle;
+
+            ctx.beginPath();
+            ctx.moveTo(centerX, centerY);
+            ctx.arc(centerX, centerY, radius, startAngle, endAngle);
+            ctx.fillStyle = colors[i];
+            ctx.fill();
+            ctx.stroke();
+
+            ctx.save();
+            ctx.translate(centerX, centerY);
+            ctx.rotate(startAngle + sliceAngle / 2);
+            ctx.textAlign = "right";
+            ctx.fillStyle = "#fff";
+            ctx.font = "24px Arial";
+            ctx.fillText(emojis[i], radius - 20, 8);
+            ctx.restore();
+        }
+    }
+
+    window.spinWheel = function() {
+        const canvas = document.getElementById('wheel-canvas');
+        const btn = document.getElementById('spin-btn');
+        const resultDiv = document.getElementById('wheel-result');
+        const resultText = document.getElementById('wheel-result-text');
+
+        resultDiv.style.display = 'none';
+        btn.disabled = true;
+
+        const spinSpins = Math.floor(Math.random() * 5) + 5; 
+        const spinDegrees = Math.floor(Math.random() * 360);
+        const totalDegrees = (spinSpins * 360) + spinDegrees;
+        
+        currentRotation += totalDegrees;
+        canvas.style.transform = `rotate(${currentRotation}deg)`;
+
+        setTimeout(() => {
+            const randomPrizeIndex = Math.floor(Math.random() * wheelOptions.length);
+            const prize = wheelOptions[randomPrizeIndex];
+
+            resultText.innerText = "🎉 " + prize;
+            resultDiv.style.display = 'block';
+            btn.disabled = false;
+            
+            if(typeof shootConfetti === 'function') shootConfetti();
+        }, 4000);
+    };
+    
+
+
+    // ==========================================
+    // SHAQADA GALLERY-GA SAWIRADA (LIGHTBOX)
+    // ==========================================
+    function openLightbox(element) {
+        // Soo qaado sawirka iyo qoraalka kaarka la gujiyay
+        const imgSrc = element.querySelector('img').src;
+        const captionText = element.querySelector('.polaroid-caption').innerText;
+
+        // Raadi qaybaha Lightbox-ka
+        const lightbox = document.getElementById('gallery-lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+
+        // Geli xogta cusub
+        lightboxImg.src = imgSrc;
+        lightboxCaption.innerText = captionText;
+
+        // Soo bandhig Lightbox-ka
+        lightbox.style.display = 'flex';
+        
+        // Sii waqti yar si uu animation-ku u shaqeeyo
+        setTimeout(() => {
+            lightbox.style.opacity = '1';
+            lightbox.querySelector('.lightbox-content').style.transform = 'scale(1)';
+        }, 10);
+    }
+
+    function closeLightbox(event) {
+        // Hubi in la taabtay batoonka xirista ama meel banaan ah, hana xirin haddii sawirka la taabto
+        if(event && event.target.id === 'lightbox-img') return;
+
+        const lightbox = document.getElementById('gallery-lightbox');
+        
+        // Qari animation-ka
+        lightbox.style.opacity = '0';
+        lightbox.querySelector('.lightbox-content').style.transform = 'scale(0.8)';
+
+        // Gebi ahaanba xir marka uu animation-ku dhamaado
+        setTimeout(() => {
+            lightbox.style.display = 'none';
+        }, 300);
+    }
+
+    // ==========================================
+    // SHAQADA SHALEECADA MUUQAALLADA (VIDEO LIGHTBOX)
+    // ==========================================
+    function openVideoLightbox(videoSrc, captionText) {
+        const lightbox = document.getElementById('video-lightbox');
+        const videoPlayer = document.getElementById('lightbox-video-player');
+        const caption = document.getElementById('lightbox-video-caption');
+
+        // Geli muuqaalka iyo qoraalka
+        videoPlayer.src = videoSrc;
+        caption.innerText = captionText;
+
+        // Soo bandhig shaashadda madow
+        lightbox.style.display = 'flex';
+        
+        setTimeout(() => {
+            lightbox.style.opacity = '1';
+            lightbox.querySelector('.vid-lightbox-content').style.transform = 'scale(1)';
+            videoPlayer.play(); // Si toos ah u shid muuqaalka
+        }, 10);
+    }
+
+    function closeVideoLightbox(event) {
+        // Ha xirin haddii muuqaalka laftiisa la taabto (si ay u istaajin karto/u wadi karto)
+        if(event && event.target.id === 'lightbox-video-player') return;
+
+        const lightbox = document.getElementById('video-lightbox');
+        const videoPlayer = document.getElementById('lightbox-video-player');
+        
+        // Qari animation-ka
+        lightbox.style.opacity = '0';
+        lightbox.querySelector('.vid-lightbox-content').style.transform = 'scale(0.8)';
+
+        // Jooji muuqaalka
+        videoPlayer.pause();
+        videoPlayer.currentTime = 0;
+
+        // Xir gebi ahaanba
+        setTimeout(() => {
+            lightbox.style.display = 'none';
+            videoPlayer.src = ''; // Nadiifi si uusan internet/batari u cunin
+        }, 400);
+    }
+
+    // ==========================================
+    // SHAQADA HEESAHA (AUTO-PAUSE AUDIO PLAYERS)
+    // ==========================================
+    document.addEventListener('play', function(e){
+        // Soo qaado dhammaan <audio> tags-ka
+        var audios = document.getElementsByTagName('audio');
+        
+        // Loop garee, midkii aan hadda la riixin "Play" jooji (Pause)
+        for(var i = 0, len = audios.length; i < len;i++){
+            if(audios[i] != e.target){
+                audios[i].pause();
+            }
+        }
+    }, true);
+
+
+    // ==========================================
+    // SHAQADA RUN AMA DHIIRANAAN (TRUTH OR DARE)
+    // ==========================================
+    
+    // 25 Su'aalood oo RUN ah (Truths)
+    const truthArray = [
+        "1. Waa maxay waxa ugu horreeya ee maskaxdaada ku soo dhaca markaad subaxdii toosto?",
+        "2. Ii sheeg hal sir oo aadan weligaa ii sheegin intii aan is baranay.",
+        "3. Goormaad si dhab ah u dareentay inaad i jeceshahay markii ugu horraysay?",
+        "4. Maxaa ugu badan ee aad igu tabtaa markaan kala maqannahay?",
+        "5. Waa maxay xusuusteenii ugu quruxda badnayd ee aan wada qaadannay (Mega Plaza, Jaleelo, iwm)?",
+        "6. Haddii aad hal shay iga beddeli lahayd, maxay ahaan lahayd?",
+        "7. Maxaa iigu kaa qurux badan muuqaalkayga?",
+        "8. Ii sheeg riyadii ugu qosolka badnayd ee aad aniga iga aragtay adoo hurda.",
+        "9. Waa maxay fariinta aan kuu soo diray ee aad ugu jeceshahay?",
+        "10. Magac noocee ah ayaad jeceshahay inaan u bixino curadkeena ugu horreeya Insha'Allah?",
+        "11. Weligaa ma iga maseyrtay adigoon ii sheegin? Goorma ayay ahayd?",
+        "12. Waa maxay waxa ugu yar ee aan sameeyo ee ku farxad geliya?",
+        "13. Haddii aan hal maalin isla qaadan lahayn meel kasta oo adduunka ah, xagee bay ahaan lahayd?",
+        "14. Waa maxay dabeecadayda aad ugu jeceshahay?",
+        "15. Maxay ahayd cabsidaadii ugu weynayd markaan is baranayney?",
+        "16. Sheeg hal shay oo aan ku baray intii aan wada joognay 2-da sano.",
+        "17. Haddii aad sheekadeena buug ka qorayso, maxaad u bixin lahayd magaciisa?",
+        "18. Ii sheeg hal shay oo aad iga xishooto inaad i weydiiso.",
+        "19. Waa maxay hadiyadd aan ku siiyay ee aad ugu jeceshahay?",
+        "20. Maxaad dareentay markii aan ku iri 'Waan Ku Jeclahay' markii ugu horraysay?",
+        "21. Waa maxay heesta aan wada dhageysano ee dareenkaaga ugu badan kicisa?",
+        "22. Weligaa ma ooysay adigoo ii xiisay aniga?",
+        "23. Ii sheeg hal caado oo aan leeyahay oo aad markii hore la yaabtay balse hadda aad ka hesho.",
+        "24. Maxaa ugu weyn ee aad ka baratay jaceylkeena?",
+        "25. Si daacad ah iigu sheeg... imisa boqolkiiba (%) ayaad i jeceshahay?"
+    ];
+
+    // 25 Dalab oo DHIIRANAAN ah (Dares)
+    const dareArray = [
+        "1. Iisoo dir Voice Note aad ku heesayso hees jaceyl ah oo aad iigu talo gashay hadda!",
+        "2. Iisoo dir sawirkaaga aad ugu jeceshahay ee ku jira taleefankaaga hadda.",
+        "3. Beddel sawirka profile-kaaga WhatsApp-ka oo sawirkayga saar muddo 1 saac ah.",
+        "4. Iisoo dir fariin cod ah adigoo leh 'Amiin, adigaa ugu qurux badan adduunka' 3 jeer!",
+        "5. Ii tiri hal gabay ama tix yar oo gaaban oo aad aniga iigu talo gashay.",
+        "6. WhatsApp Status ka dhig 'Waan jeclahay gacaliyahayga' (Ha u qarin dadka!).",
+        "7. Iisoo dir sawir qosol badan (funny face) oo aad hadda iska qaaday.",
+        "8. Muddo 5 daqiiqo ah, iigu yeer magac naaneys ah oo aad ii bixisay oo qosol leh.",
+        "9. Ii ballanqaad casho adiga aad gacantaada iigu kariso maalinta Ciidda.",
+        "10. Taleefanka iiga soo wac hadda, oo 1 daqiiqo aamus adigoon waxba dhihin.",
+        "11. Iisoo dir 10 emoji oo wadne ah, mid walbana sababtiisa iigu soo qor.",
+        "12. Tiri 5 shay oo aad jeceshahay inaan mustaqbalka wada sameyno marka aan is-guursano.",
+        "13. Iisoo duub adigoo qoslaya qosolkaagii ugu weynaa!",
+        "14. Ii sheeg 3 sifo oo aan kaga duwanahay ragga kale ee adduunka.",
+        "15. Qor magacayga iyo magacaaga warqad, sawir wadne u dhexaysii, dabadeedna sawir iga soo qaad.",
+        "16. Ii soo dir fariin ah 'Aad baan kuu rabaa' adigoo indhaha isku haya (blindsight typing).",
+        "17. Ii sheeg amaan aanan waligay horay kaaga maqal.",
+        "18. Ballanqaad in aan anigu labbiskaaga doorto maalinta aan wada kulmayno.",
+        "19. Hadda istaag oo hal sawir oo 'Selfie' ah oo dhoolacadeyn ah iga soo qaad.",
+        "20. Ii sheeg hal sir oo yar oo ku saabsan carruurnimadaadii.",
+        "21. Ii soo dir link-ga hees aad jeceshahay in aan anigu kula dhegeysto caawa.",
+        "22. Ku qor magacayga calaacashaada, sawirna iga soo qaad.",
+        "23. Iisoo wac oo iiga sheekee sheeko gaaban oo qosol leh.",
+        "24. Soo qaado hal shay oo aad iiga maseyrto oo ii sheeg hadda.",
+        "25. Iigu dhaaro inaad i jeceshahay ilaa aakhiro!"
+    ];
+
+    function playTD(type) {
+        const modal = document.getElementById('td-modal');
+        const modalContent = document.getElementById('td-modal-content');
+        const typeLabel = document.getElementById('td-result-type');
+        const resultText = document.getElementById('td-result-text');
+
+        let selectedArray = type === 'truth' ? truthArray : dareArray;
+        let randomIndex = Math.floor(Math.random() * selectedArray.length);
+        let result = selectedArray[randomIndex];
+
+        // Qurxi fariinta sare
+        if (type === 'truth') {
+            typeLabel.innerHTML = "😇 RUN (Su'aal Daacad ah)";
+            typeLabel.style.color = "#5B86E5";
+        } else {
+            typeLabel.innerHTML = "🔥 DHIIRANAAN (Ficil Samee)";
+            typeLabel.style.color = "#FF416C";
+        }
+
+        resultText.innerHTML = result;
+
+        // Soo bandhig Modal-ka
+        modal.style.display = 'flex';
+        setTimeout(() => {
+            modal.style.opacity = '1';
+            modalContent.style.transform = 'scale(1)';
+            if(typeof shootConfetti === 'function') shootConfetti(); // Shid ubaxyo yar
+        }, 10);
+    }
+
+    function closeTDModal() {
+        const modal = document.getElementById('td-modal');
+        const modalContent = document.getElementById('td-modal-content');
+        
+        modal.style.opacity = '0';
+        modalContent.style.transform = 'scale(0.7)';
+
+        setTimeout(() => {
+            modal.style.display = 'none';
+        }, 300);
+    }
+    </script>
+  
+
+</body>
+</html>
