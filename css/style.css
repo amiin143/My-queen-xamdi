@@ -220,6 +220,101 @@
             100% { top: 100%; }
         }
 
+
+/* ========================================= */
+        /* QURXINTA QAYBTA WADNAHA (MAGIC HEART)     */
+        /* ========================================= */
+        
+        .magic-header-text {
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .magic-title {
+            color: var(--rose-red);
+            font-family: 'Georgia', serif;
+            font-size: 2.2rem;
+            text-shadow: 0 2px 5px rgba(211, 47, 47, 0.2);
+            margin: 0;
+            line-height: 1.3;
+        }
+        
+        .magic-subtitle {
+            color: #ff69b4;
+            font-size: 1.1rem;
+            font-style: italic;
+            letter-spacing: 2px;
+            margin-top: 5px;
+            text-transform: uppercase;
+        }
+        
+        /* Sanduuqa xakameynaya inaysan is-dhex gelin */
+        .magic-visuals {
+            position: relative;
+            width: 100%;
+            height: 450px; /* Dherer go'an oo Laptop-ka ah */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+
+        #heartCanvas {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        .ring-container {
+            position: absolute;
+            z-index: 2;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .magic-footer {
+            background: linear-gradient(135deg, #fffdf5 0%, #ffe6e6 100%);
+            padding: 20px 15px;
+            border-radius: 15px;
+            border: 2px dashed var(--rose-red);
+            box-shadow: 0 10px 25px rgba(211, 47, 47, 0.15);
+            position: relative;
+            z-index: 10;
+            margin-top: 10px;
+        }
+        
+        .footer-msg {
+            color: #444;
+            font-size: 1.15rem;
+            line-height: 1.6;
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            margin-bottom: 12px;
+        }
+        
+        .footer-love {
+            color: var(--rose-red);
+            font-size: 1.3rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        
+        /* XALKA MOBILE-KA (Responsive) */
+        @media (max-width: 600px) {
+            .magic-title { font-size: 1.7rem; }
+            .magic-subtitle { font-size: 0.9rem; }
+            .magic-visuals { height: 350px; } /* Mobile-ka wuu is-yaraynayaa si uusan meel badan u qaadan */
+            .footer-msg { font-size: 1.05rem; line-height: 1.5; }
+            .footer-love { font-size: 1.15rem; }
+            .magic-footer { padding: 15px 10px; }
+        }
+
+
         /* ------------------------------------------- */
         /* SURPRISE SECTION (FIXED & BEAUTIFIED)       */
         /* ------------------------------------------- */
