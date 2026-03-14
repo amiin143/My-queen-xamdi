@@ -7,7 +7,20 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+<div id="scanner-screen">
+        <h2 style="color: var(--rose-red); font-family: 'Georgia', serif; font-size: 2rem; margin-bottom: 10px;">Amniga Janogasho 🔐</h2>
+        <p style="color: #ccc; font-size: 1.1rem; text-align: center; max-width: 80%; margin-bottom: 30px;">
+            "Fadlan saar fartaada calaamadda si aan u xaqiijiyo inaad tahay Janogashodayda dhabta ah."
+        </p>
+        
+        <div id="fingerprint-box" class="fingerprint-box">
+            <div id="scan-line" class="scan-line"></div>
+            <span class="finger-icon">👆</span>
+        </div>
+        
+        <div id="scan-percent">0%</div>
+        <div id="scan-message">Farta saar si aad u bilowdo...</div>
+    </div>
     <audio id="bg-music" src="music/background-music.m4a" loop></audio>
 
     <div id="login-screen">
@@ -73,7 +86,7 @@
        <button class="nav-btn" onclick="openTab('wheel', this)">🎡 Shaagga Nasiibka</button>
        <button class="nav-btn" onclick="openTab('truth-dare', this)">🎭 Truth & Dare</button>
        <button class="nav-btn" onclick="openTab('coupons', this)">🎟️ Tigidhada Jaceylka</button>
-         <button class="nav-btn locked" data-time="2026-03-14T22:00:00" onclick="openTab('future-dreams', this)">🔒 💭 Riyooyinkeena</button>
+       <button class="nav-btn locked" data-time="2026-03-14T22:00:00" onclick="openTab('future-dreams', this)">🔒 💭 Riyooyinkeena</button>
        <button class="nav-btn locked" data-time="2026-03-15T00:00:00" onclick="openTab('voice-note', this)">🔒 🎙️ Codkayga</button>
        <button class="nav-btn locked" data-time="2026-03-15T00:00:00" onclick="openTab('surprise', this)" style="background: #000; color: #ff1493; border-color: #ff1493;">🔒 🎁 Surprise</button>
 
@@ -827,12 +840,20 @@
         <section id="magic-heart" class="content-section">
             <h2 class="magic-title">Sannad Guuro Wacan, Janogasho ❤️</h2>
             <br>
+            <br>
+<br>
+<br>
+<br>
             <canvas id="heartCanvas"></canvas>
             
             <div class="ring-container">
                 <div class="ring-text" id="ring-text">
                     </div>
             </div>
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
             <div class="magic-footer">
@@ -1116,12 +1137,37 @@
         </section>
     </div>
 
-    <footer id="main-footer" style="display: none;">
-        <h3>"Xamdi, adiga ayaa iftiimiyay noloshayda."</h3>
-        <div class="footer-heart">❤️</div>
-        <p>Laba sano waa bilow oo kaliya. Sannado badan oo farxad leh ayaa inoo dhiman.</p>
-        <p style="margin-top: 20px; font-size: 0.9rem;">Designed with infinite love by <strong>Amiin Janogale</strong> <br> For his beautiful <strong>Xamdi janogasho</strong> | March 15, 2026</p>
-    </footer>
+   <footer id="main-footer" style="display: none; text-align: center; padding: 20px; color: white; margin-top: 40px;">
+            <h3 style="color: white; font-family: 'Georgia', serif; font-style: italic;">"Xamdi, adiga ayaa iftiimiyay noloshayda."</h3>
+            <div class="footer-heart" style="font-size: 2rem; margin: 10px 0; animation: heartbeat 1.5s infinite;">❤️</div>
+            <p>Laba sano waa bilow oo kaliya. Sannado badan oo farxad leh ayaa inoo dhiman I.A.</p>
+            <p style="margin-top: 20px; font-size: 0.95rem;">
+                Designed with infinite love by <br>
+                
+                <strong id="secret-amiin" style="cursor: pointer; color: white; font-size: 1.4rem; display: inline-block; user-select: none; -webkit-tap-highlight-color: transparent; margin: 5px 0;">
+                    Amiin Janogale
+                </strong> <br> 
+                
+                For his beautiful <strong>Xamdi Janogasho</strong> | March 15, 2026
+            </p>
+        </footer>
+
+        <div id="cinematic-screen" style="display: none;">
+            <div class="cinematic-text-container">
+                <p id="cinematic-message">
+                    Janogasho...<br><br>
+                    Laba sano ka hor, ma aanan ogeyn in noloshaydu ay isbedel weyn ku imaan doonto.<br><br>
+                    Waxaad ii noqotay iftiin, wehel, iyo rajadayda berrito.<br><br>
+                    Ballanqaadkayga ugu weyn ma aha oo kaliya inaan ku jeclaado maanta...<br><br>
+                    Balse waa inaan ku doorto maalin kasta, xaalad kasta, ilaa neeftayda ugu dambaysa.<br><br>
+                    Waxaad tahay riyadii iigu quruxda badnayd ee dhab noqotay.<br><br>
+                    Waan Ku Jeclahay, Xamdi! ♾️❤️
+                </p>
+            </div>
+            <button onclick="closeCinematic()" class="close-cinematic">Xir Fariinta</button>
+        </div>
+
+        <audio id="cinematic-music" src="music/cinematic.m4a"></audio>
 
    <script>
     // ==========================================
@@ -1963,6 +2009,176 @@
 
     // 3. Marka Browser-ka la xiro ama la qariyo (Deep Mobile Fallback)
     window.addEventListener("pagehide", pauseAllMedia);
+
+    // ==========================================
+    // SHAQADA BAARAHA FARAHA (FINGERPRINT SCANNER LOGIC)
+    // ==========================================
+    let scanTimer = null;
+    let scanProgress = 0;
+    let isUnlocked = false;
+
+    const scannerBox = document.getElementById('fingerprint-box');
+    const scanPercent = document.getElementById('scan-percent');
+    const scanMessage = document.getElementById('scan-message');
+    const scannerScreen = document.getElementById('scanner-screen');
+    const loginScreen = document.getElementById('login-screen'); 
+
+    function startScan(e) {
+        // Ka ilaali in taleefanku Scroll sameeyo ama sawirka Save dhaho
+        if (e && e.cancelable) {
+            // e.preventDefault() waa laga tegi karaa Laptop-ka, laakiin Mobile-ka waa muhiim
+            if (e.type === 'touchstart') e.preventDefault();
+        }
+        if (isUnlocked) return;
+        
+        scannerBox.classList.add('scanning');
+        scanMessage.innerText = "Waan ku baarayayaa...";
+        scanMessage.style.color = "#32cd32"; // Cagaar
+        scanPercent.style.color = "#32cd32";
+        
+        // 35 milise seconds * 100 = 3.5 ilbiriqsi in la hayo farta
+        scanTimer = setInterval(() => {
+            scanProgress += 1; 
+            scanPercent.innerText = scanProgress + "%";
+            
+            if (scanProgress >= 100) {
+                // GUUL!
+                clearInterval(scanTimer);
+                isUnlocked = true;
+                scannerBox.classList.remove('scanning');
+                
+                scanMessage.innerHTML = "Waa la xaqiijiyay: <strong style='color: var(--rose-red);'>Xamdi 100%</strong>.<br>Soo dhawoow Boqoradeydii! ❤️";
+                scanMessage.style.color = "white";
+                scanPercent.style.color = "var(--rose-red)";
+                
+                // Sug 2 ilbiriqsi, kadibna u gudbi Login-ka
+                setTimeout(() => {
+                    scannerScreen.style.opacity = '0';
+                    scannerScreen.style.transform = 'scale(1.1)'; // Xoogaa wuu weynaanayaa inta uusan dhiman
+                    
+                    setTimeout(() => {
+                        scannerScreen.style.display = 'none';
+                        // Soo saar Login Screen-ka
+                        if(loginScreen) {
+                            loginScreen.style.display = 'flex';
+                            loginScreen.style.opacity = '1';
+                        }
+                    }, 1000);
+                }, 2000);
+            }
+        }, 35); 
+    }
+
+    function stopScan(e) {
+        if (isUnlocked) return;
+        
+        clearInterval(scanTimer);
+        scannerBox.classList.remove('scanning');
+        
+        // Haddii ay farta ka qaadday inta aan 100% la gaarin
+        if (scanProgress > 0 && scanProgress < 100) {
+            scanMessage.innerText = "Farta haku qaadin macaaneey, weli waan ku baarayayaa! 🙈";
+            scanMessage.style.color = "#ff4d4d"; // Casaan digiin ah
+            scanPercent.style.color = "rgba(255, 255, 255, 0.5)";
+            scanProgress = 0;
+            scanPercent.innerText = "0%";
+        }
+    }
+
+    // Laptop-ka (Mouse Events)
+    if(scannerBox) {
+        scannerBox.addEventListener('mousedown', startScan);
+        window.addEventListener('mouseup', stopScan);
+        
+        // Mobile-ka (Touch Events)
+        scannerBox.addEventListener('touchstart', startScan, {passive: false});
+        window.addEventListener('touchend', stopScan);
+        window.addEventListener('touchcancel', stopScan);
+        
+        // Haddii ay farta la baxsato iyadoo weli hayso
+        scannerBox.addEventListener('mouseleave', stopScan);
+    }
+
+    // ==========================================
+    // SHAQADA FURAHA SIRTA AH (5 TAPS SECRET CODE)
+    // ==========================================
+    let tapCount = 0;
+    let tapTimer = null;
+
+    const secretNameBtn = document.getElementById('secret-amiin');
+    
+    if(secretNameBtn) {
+        // Dhacdo qabanaysa taabashada Farta iyo Click-gaba
+        secretNameBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            tapCount++;
+            
+            // Tirtir waqtigii hore si aanu u reset-garayn haddii ay degdeg u garaacayso
+            clearTimeout(tapTimer);
+            
+            // Haddii ay joojiso garaacista muddo 2 ilbiriqsi ah, dib ugu celi Eber
+            tapTimer = setTimeout(() => {
+                tapCount = 0;
+            }, 2000);
+
+            // BINGO! Haddii la garaaco 5 jeer si xiriir ah
+            if (tapCount === 5) {
+                triggerCinematicMovie();
+                tapCount = 0; // Dib u eber ka dhig
+            }
+        });
+    }
+
+    function triggerCinematicMovie() {
+        // 1. Jooji dhammaan codadka iyo muuqaalada dhexda ka socday
+        document.querySelectorAll('audio, video').forEach(media => media.pause());
+        
+        // 2. Shid Music-ga sirta ah ee shucuurta leh
+        const cineMusic = document.getElementById('cinematic-music');
+        if(cineMusic) cineMusic.play().catch(e => console.log(e));
+
+        // 3. Soo bandhig shaashadda madow
+        const screen = document.getElementById('cinematic-screen');
+        const msg = document.getElementById('cinematic-message');
+        const closeBtn = document.querySelector('.close-cinematic');
+        
+        screen.style.display = 'flex';
+        
+        // Sug 100 milliseconds si fade-gu u shaqeeyo
+        setTimeout(() => {
+            screen.style.opacity = '1'; // Shaashaddu way madoobaanaysaa
+            msg.classList.add('scroll-up-movie'); // Qoraalka ayaa hoosta ka soo baxaya
+            
+            // Batoonka "Xir" dib ha u dhaco si aysan degdeg ugu xirin
+            setTimeout(() => {
+                closeBtn.style.opacity = '1';
+            }, 5000);
+        }, 100);
+    }
+
+    function closeCinematic() {
+        const screen = document.getElementById('cinematic-screen');
+        const msg = document.getElementById('cinematic-message');
+        const cineMusic = document.getElementById('cinematic-music');
+        const bgMusic = document.getElementById('bg-music');
+        
+        // Madoobaanta yaree (Fade out)
+        screen.style.opacity = '0';
+        
+        setTimeout(() => {
+            screen.style.display = 'none';
+            msg.classList.remove('scroll-up-movie'); // Celi qoraalka booskiisii hore
+            
+            // Jooji muusiga sirta ah
+            if(cineMusic) {
+                cineMusic.pause();
+                cineMusic.currentTime = 0;
+            }
+            
+            // Dib u shid heestii caadiga ahayd ee Background-ka
+            if(bgMusic) bgMusic.play().catch(e => console.log(e));
+        }, 2000); // 2 ilbiriqsi kadib ayuu gebi ahaanba xirmayaa
+    }
 </script>
   
 
