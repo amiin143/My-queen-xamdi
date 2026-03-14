@@ -133,6 +133,93 @@
         .music-card, .note-card { background: #fff; margin: 15px auto; padding: 20px; border-radius: 15px; border-left: 5px solid var(--rose-red); box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: left; }
 
 
+
+        /* ========================================= */
+        /* STYLE-KA BAARAHA FARAHA (FINGERPRINT)     */
+        /* ========================================= */
+        #scanner-screen {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: #111; /* Madow qurux badan */
+            z-index: 999999; /* Ugu sarreeya wax walba */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .fingerprint-box {
+            position: relative;
+            width: 130px;
+            height: 160px;
+            border: 3px solid rgba(255, 20, 147, 0.4);
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            overflow: hidden;
+            cursor: pointer;
+            user-select: none;
+            -webkit-user-select: none;
+            transition: all 0.3s;
+            box-shadow: inset 0 0 20px rgba(255, 20, 147, 0.1);
+        }
+
+        .finger-icon {
+            font-size: 5rem;
+            opacity: 0.8;
+            pointer-events: none; /* Si aysan farta u xannibin */
+            filter: drop-shadow(0 0 10px rgba(255, 20, 147, 0.5));
+        }
+
+        .scan-line {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 5px;
+            background: #32cd32;
+            box-shadow: 0 0 15px #32cd32, 0 0 30px #32cd32;
+            display: none;
+        }
+
+        #scan-percent {
+            font-size: 2.5rem;
+            font-weight: bold;
+            font-family: 'Courier New', monospace;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+
+        #scan-message {
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 0 20px;
+            color: #fff;
+            min-height: 30px;
+            font-family: 'Georgia', serif;
+            font-style: italic;
+        }
+
+        /* Marka ay farta saaran tahay (Active State) */
+        .fingerprint-box.scanning {
+            border-color: #32cd32;
+            box-shadow: 0 0 20px rgba(50, 205, 50, 0.4), inset 0 0 20px rgba(50, 205, 50, 0.2);
+            transform: scale(0.95); /* Yarayn yar oo muujinaysa in la riixay */
+        }
+        
+        .fingerprint-box.scanning .scan-line {
+            display: block;
+            animation: scanMove 1.5s infinite linear alternate;
+        }
+
+        @keyframes scanMove {
+            0% { top: -5px; }
+            100% { top: 100%; }
+        }
+
         /* ------------------------------------------- */
         /* SURPRISE SECTION (FIXED & BEAUTIFIED)       */
         /* ------------------------------------------- */
@@ -2162,3 +2249,78 @@
             transition: transform 0.2s;
         }
         .td-btn-again:hover { transform: scale(1.05); }
+
+        /* ========================================= */
+        /* SHAASHADDA SIRTA AH (CINEMATIC SECRET)    */
+        /* ========================================= */
+        #cinematic-screen {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: #000; /* Madow saafi ah */
+            color: #fff;
+            z-index: 9999999; /* Ugu sarreeya wax kasta */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+
+        .cinematic-text-container {
+            position: relative;
+            width: 85%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+        }
+
+        #cinematic-message {
+            position: absolute;
+            top: 100%; /* Hoosta ayuu ka soo bilaabanayaa */
+            text-align: center;
+            font-size: 1.6rem;
+            line-height: 2.2;
+            font-family: 'Georgia', serif;
+            color: #ffd700; /* Midab dahabi ah sida Star Wars */
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        /* Dhaqdhaqaaqa fariinta oo kor u socota (Animation) */
+        .scroll-up-movie {
+            animation: cinematicScroll 40s linear forwards; /* 40 ilbiriqsi ayuu kor ugu soconayaa */
+        }
+
+        @keyframes cinematicScroll {
+            0% { top: 100%; opacity: 1; transform: scale(1); }
+            80% { opacity: 1; }
+            100% { top: -150%; opacity: 0; transform: scale(0.8); }
+        }
+
+        .close-cinematic {
+            position: absolute;
+            bottom: 40px;
+            padding: 10px 30px;
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            color: #fff;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            opacity: 0;
+            transition: opacity 2s, background 0.3s;
+            z-index: 10;
+        }
+        .close-cinematic:hover {
+            background: #fff;
+            color: #000;
+        }
+
+       
