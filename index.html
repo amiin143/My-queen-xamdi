@@ -8,7 +8,7 @@
 </head>
 <body>
 <div id="scanner-screen">
-        <h2 style="color: var(--rose-red); font-family: 'Georgia', serif; font-size: 2rem; margin-bottom: 10px;">Amniga Janogasho 🔐</h2>
+        <h2 style="color: var(--rose-red); font-family: 'Georgia', serif; font-size: 2rem; margin-bottom: 10px;">Security Authentication 🔐</h2>
         <p style="color: #ccc; font-size: 1.1rem; text-align: center; max-width: 80%; margin-bottom: 30px;">
             "Fadlan saar fartaada calaamadda si aan u xaqiijiyo inaad tahay Janogashodayda dhabta ah."
         </p>
@@ -836,29 +836,26 @@
             </div>
         </section>
 
-
-        <section id="magic-heart" class="content-section" style="text-align: center; padding: 20px 10px;">
+<section id="magic-heart" class="content-section" style="background: #000 !important; padding: 40px 10px !important; border-radius: 20px; text-align: center; border: none !important; box-shadow: none !important;">
             
-            <div class="magic-header-text">
-                <h2 class="magic-title">Sannad Guuro Wacan, Janogasho ❤️</h2>
-                <p class="magic-subtitle">Maalinteena Gaarka Ah</p>
-            </div>
-            
-            <div class="magic-visuals">
-                <canvas id="heartCanvas"></canvas>
-                <div class="ring-container">
-                    <div class="ring-text" id="ring-text"></div>
-                </div>
+            <div style="margin-bottom: 20px;">
+                <h2 style="color: #ff1493 !important; font-family: 'Georgia', serif; font-size: 2.2rem; margin: 0; text-shadow: 0 0 15px rgba(255,20,147,0.8);">Sannad Guuro Wacan, Janogasho ❤️</h2>
+                <p style="color: #ffd700 !important; font-size: 1rem; letter-spacing: 2px; margin-top: 5px; text-transform: uppercase; font-style: italic;">Maalinteena Gaarka Ah</p>
             </div>
 
-            <div class="magic-footer">
-                <p class="footer-msg">"Hadiyaddan adigaan kuugu talagalay macaan badanteyda, adiga dartaa ayay u samaysan tahay."</p>
-                <p class="footer-love">Waan ku jeclahay, qalbigayga oo dhan adaa leh! 💖</p>
+            <div id="canvas-box" style="position: relative; width: 100%; max-width: 500px; height: 450px; margin: 0 auto; background: #000 !important; border-radius: 10px; overflow: hidden;">
+                <canvas id="heartCanvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent !important;"></canvas>
+            </div>
+
+            <div style="background: #fff !important; padding: 20px !important; border-radius: 15px; border: 2px dashed #ff1493 !important; max-width: 450px; margin: 30px auto 0 auto; position: relative; z-index: 20;">
+                <p style="color: #333 !important; font-family: 'Georgia', serif; font-style: italic; font-size: 1rem; margin-bottom: 10px; line-height: 1.5;">"Hadiyaddan adigaan kuugu talagalay macaan badanteyda, adiga dartaa ayay u samaysan tahay."</p>
+                <p style="color: #ff1493 !important; font-weight: bold; font-size: 1.25rem; margin: 0;">Waan ku jeclahay, qalbigayga oo dhan adaa leh! 💖</p>
             </div>
 
         </section>
 
-        
+
+
 <section id="coupons" class="content-section">
             <h2 style="color: var(--rose-red); margin-bottom: 10px; font-family: 'Georgia', serif; font-style: italic;">Tigidhada VIP-ga 🎟️✨</h2>
             <p style="color: #666; margin-bottom: 30px; font-style: italic; font-size: 1.1rem;">"Qurux badanteyda, mid walba hal mar ayaad isticmaali kartaa. Farta/Mouse-ka ku xoq si aad u aragto waxa kuugu jira!"</p>
@@ -1228,7 +1225,6 @@
         if (tabId === 'magic-heart' && !animationStarted) {
             resizeCanvas();
             createHeartParticles();
-            createRingText();
             animateHeart();
             animationStarted = true;
         }
@@ -1383,34 +1379,42 @@
             setTimeout(() => { particle.remove(); }, 12000);
         }, 800);
     }
-
-    // ANIMATION-KA WADNAHA
+// ==========================================
+    // ANIMATION-KA WADNAHA & QORAALKA (XALKA UGU DAMBEEYA)
+    // ==========================================
     const canvas = document.getElementById('heartCanvas');
     const ctx = canvas ? canvas.getContext('2d') : null;
     let particles = [];
 
     function resizeCanvas() {
         if(!canvas) return;
-        canvas.width = canvas.parentElement.clientWidth || window.innerWidth;
-        canvas.height = 500;
+        const box = document.getElementById('canvas-box');
+        if(box) {
+            // Tani waxay diidaysaa in Canvas-ku uu firdho ama dhinac ka madoobaado
+            canvas.width = box.clientWidth || window.innerWidth;
+            canvas.height = box.clientHeight || 380;
+        }
     }
     window.addEventListener('resize', resizeCanvas);
-    if(canvas) resizeCanvas();
 
     function createHeartParticles() {
         particles = [];
-        const numParticles = 400; 
+        const numParticles = 450; 
         for (let i = 0; i < numParticles; i++) {
             let t = Math.PI * 2 * i / numParticles;
-            let r = 12; 
+            let r = window.innerWidth < 600 ? 7 : 11; 
+            
             let targetX = r * 16 * Math.pow(Math.sin(t), 3) + canvas.width / 2;
-            let targetY = -r * (13 * Math.cos(t) - 5 * Math.cos(2*t) - 2 * Math.cos(3*t) - Math.cos(4*t)) + canvas.height / 2 - 30;
-            let startX = (Math.random() * canvas.width);
-            let startY = canvas.height + (Math.random() * 300); 
+            let targetY = -r * (13 * Math.cos(t) - 5 * Math.cos(2*t) - 2 * Math.cos(3*t) - Math.cos(4*t)) + canvas.height / 2;
+            
+            let startX = canvas.width / 2;
+            let startY = canvas.height / 2; 
 
             particles.push({
                 x: startX, y: startY, targetX: targetX, targetY: targetY,
-                size: Math.random() * 12 + 8, speed: Math.random() * 0.03 + 0.01, delay: Math.random() * 100
+                size: Math.random() * (window.innerWidth < 600 ? 6 : 9) + 4, 
+                speed: Math.random() * 0.03 + 0.015, 
+                delay: Math.random() * 60
             });
         }
     }
@@ -1418,7 +1422,10 @@
     function animateHeart() {
         if(!ctx) return;
         requestAnimationFrame(animateHeart);
-        ctx.fillStyle = 'rgba(5, 5, 5, 0.2)';
+        
+        // XALKA MIDABKA: Waxaan u beddelaynaa '#0a0a0a' oo leh 0.3 opacity. 
+        // Kani waa isla madowgii background-ka ee HTML-ka, markaa ma muuqan doono xariiq ama kala go'
+        ctx.fillStyle = 'rgba(10, 10, 10, 0.3)'; 
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
         particles.forEach((p) => {
@@ -1429,29 +1436,12 @@
             }
             ctx.font = p.size + "px Arial";
             ctx.fillStyle = "#ff1493";
-            ctx.shadowBlur = 10;
+            ctx.shadowBlur = 8;
             ctx.shadowColor = "#ff007f";
             ctx.fillText("❤", p.x, p.y);
         });
     }
-
-    function createRingText() {
-        const text = "Noloshayda Janogasho • Sannad Guuro Wacan • Waan Ku Jeclahay • ";
-        const ringTextElement = document.getElementById('ring-text');
-        if(!ringTextElement) return;
-        ringTextElement.innerHTML = ''; 
-        const radius = 150; 
-        const letters = text.split('');
-        const angleStep = 360 / letters.length;
-
-        letters.forEach((char, index) => {
-            const span = document.createElement('span');
-            span.innerText = char;
-            span.style.transform = `rotateZ(${index * angleStep}deg) translateY(-${radius}px)`;
-            ringTextElement.appendChild(span);
-        });
-    }
-
+    
     // MASHIINKA SABABAHA AAN KUU JECLAHAY
     const loveReasons = [
         "Dhoolacadeyntaada ayaa maalintayda iftiimisa oo i illowsiisa murugo kasta. ☀️",
