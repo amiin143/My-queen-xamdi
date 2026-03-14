@@ -50,27 +50,76 @@
         header h1 { color: var(--rose-red); font-size: 2.5rem; animation: glow 2s infinite alternate; }
         header p { font-size: 1.2rem; font-style: italic; color: #555; margin-top: 10px; }
 
-        /* Navigation Menu Buttons */
-        .nav-grid {
-            display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; padding: 20px;
-            max-width: 800px; margin: 0 auto;
+       /* ========================================= */
+        /* NIDAAMKA MENU-GA CUSUB EE FARTA LAGU JIIDO*/
+        /* ========================================= */
+        .nav-scroll-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto 30px auto;
+            mask-image: linear-gradient(to right, transparent, black 2%, black 98%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 2%, black 98%, transparent);
         }
-        .nav-btn {
-            background: var(--white); border: 2px solid var(--rose-red); color: var(--rose-red);
-            padding: 15px 25px; border-radius: 30px; font-size: 1.1rem; font-weight: bold;
-            cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            display: flex; align-items: center; gap: 10px;
-        }
-        .nav-btn:hover, .nav-btn.active { background: var(--rose-red); color: var(--white); transform: scale(1.05); }
 
-/* Style-ka Batoonada Xiran (Locked) */
+        .nav-menu-scroll {
+            display: grid;
+            grid-template-rows: repeat(2, 1fr); /* LABA SAF OO KELIYA */
+            grid-auto-flow: column; 
+            gap: 12px 15px; 
+            overflow-x: auto;
+            padding: 10px 15px 20px 15px;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch; 
+            scrollbar-width: none; 
+        }
+
+        .nav-menu-scroll::-webkit-scrollbar {
+            display: none; 
+        }
+
+        .nav-btn {
+            background: white;
+            color: var(--rose-red);
+            border: 2px solid rgba(211, 47, 47, 0.3);
+            padding: 12px 25px;
+            border-radius: 30px; 
+            font-family: 'Georgia', serif;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            white-space: nowrap; /* Diid in qoraalku go'o */
+            box-shadow: 0 4px 10px rgba(211, 47, 47, 0.05);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(211, 47, 47, 0.15);
+            border-color: var(--rose-red);
+        }
+
+        .nav-btn.active {
+            background: var(--rose-red) !important;
+            color: white !important;
+            border-color: var(--rose-red) !important;
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(211, 47, 47, 0.3);
+        }
+        
         .nav-btn.locked {
-            background: #e0e0e0 !important;
-            color: #888 !important;
-            border-color: #ccc !important;
-            cursor: not-allowed;
-            transform: none !important;
+            background: #f9f9f9 !important;
+            color: #aaa !important;
+            border: 2px dashed #ddd !important;
             box-shadow: none !important;
+            cursor: not-allowed;
+        }
+        
+        .nav-btn.locked:hover {
+            transform: none;
         }
 
         /* Content Sections */
@@ -83,57 +132,177 @@
         .media-card img, .media-card video { width: 100%; border-radius: 10px; }
         .music-card, .note-card { background: #fff; margin: 15px auto; padding: 20px; border-radius: 15px; border-left: 5px solid var(--rose-red); box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: left; }
 
+
         /* ------------------------------------------- */
-        /* SURPRISE SECTION (MATCHING SCREENSHOTS)     */
+        /* SURPRISE SECTION (FIXED & BEAUTIFIED)       */
         /* ------------------------------------------- */
-        #surprise-wrapper { background: var(--dark-bg); border-radius: 20px; min-height: 70vh; position: relative; overflow: hidden; color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; box-shadow: 0 0 30px rgba(0,0,0,0.5); }
+        #surprise-wrapper { 
+            background: var(--dark-bg); 
+            border-radius: 20px; 
+            min-height: 75vh; 
+            position: relative; 
+            overflow: hidden; 
+            color: white; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            box-shadow: 0 0 30px rgba(0,0,0,0.5); 
+        }
         
         /* Surprise Menu */
-        #surprise-menu h2 { font-size: 2rem; letter-spacing: 3px; text-transform: uppercase; text-shadow: 0 0 10px cyan, 0 0 20px cyan; margin-bottom: 10px; }
-        #surprise-menu p { margin-bottom: 30px; font-size: 1.2rem; }
-        .btn-surprise { background: transparent; border: 2px solid white; color: white; padding: 12px 24px; margin: 10px; font-weight: bold; cursor: pointer; border-radius: 5px; transition: 0.3s; text-transform: uppercase; }
-        .btn-surprise:hover { background: white; color: black; box-shadow: 0 0 15px white; }
+        #surprise-menu h2 { font-size: 2rem; letter-spacing: 3px; text-transform: uppercase; text-shadow: 0 0 10px cyan, 0 0 20px cyan; margin-bottom: 10px; text-align: center;}
+        #surprise-menu p { margin-bottom: 30px; font-size: 1.2rem; text-align: center; }
+        .btn-surprise { background: transparent; border: 2px solid white; color: white; padding: 12px 24px; margin: 10px; font-weight: bold; cursor: pointer; border-radius: 30px; transition: 0.3s; text-transform: uppercase; }
+        .btn-surprise:hover { background: white; color: black; box-shadow: 0 0 20px white; transform: scale(1.05); }
 
-        /* Growing Glowing Flowers (CSS Animation) */
+        /* Batoonka "Dib u noqo" ee la xalliyay */
+        .back-btn-top {
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            padding: 10px 25px;
+            background: var(--rose-red);
+            color: white;
+            border: 2px solid white;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+        .back-btn-top:hover { background: white; color: var(--rose-red); }
+
+        /* ========================================= */
+        /* UBAXA DABIICIGA AH EE SLOW MOTION (60s)   */
+        /* ========================================= */
         #flower-scene { display: none; position: relative; width: 100%; height: 500px; background: var(--dark-bg); align-items: flex-end; justify-content: center; }
-        .flower-container { position: relative; bottom: 50px; display: flex; gap: 20px; align-items: flex-end; }
-        .stem { width: 6px; background: linear-gradient(to top, #006400, #32cd32); border-radius: 5px; position: relative; transform-origin: bottom; animation: growStem 3s ease-out forwards; }
-        .stem-1 { height: 200px; transform: rotate(-15deg); }
-        .stem-2 { height: 280px; }
-        .stem-3 { height: 180px; transform: rotate(15deg); }
-        .leaf { position: absolute; width: 40px; height: 20px; background: #32cd32; border-radius: 0 20px 0 20px; opacity: 0; animation: showLeaf 1s ease-out 2s forwards; }
-        .stem-2 .leaf { top: 50%; left: -35px; }
-        .stem-1 .leaf { top: 40%; right: -35px; border-radius: 20px 0 20px 0; }
-        .bloom { position: absolute; top: -30px; left: -25px; width: 60px; height: 60px; background: radial-gradient(circle, #ff69b4, #ff1493); border-radius: 50% 50% 0 50%; transform: rotate(45deg) scale(0); box-shadow: 0 0 20px #ff69b4, 0 0 40px #ff1493; animation: bloomFlower 2s ease-out 3s forwards; }
-
-        @keyframes growStem { 0% { height: 0; } 100% { } } /* Height handled by base class */
-        @keyframes showLeaf { 0% { opacity: 0; transform: scale(0); } 100% { opacity: 1; transform: scale(1); } }
-        @keyframes bloomFlower { 0% { transform: rotate(45deg) scale(0); } 100% { transform: rotate(45deg) scale(1); } }
+        .flower-container { position: relative; bottom: 30px; display: flex; gap: 25px; align-items: flex-end; }
         
-        /* Light particles for flowers */
+        /* Jirridda Ubaxa (Stem) */
+        .stem { 
+            width: 8px; 
+            background: linear-gradient(to top, #004d00, #32cd32); 
+            border-radius: 5px; 
+            position: relative; 
+            transform-origin: bottom; 
+            /* Korriin soconaya 1 Daqiiqo (60 seconds) */
+            animation: growStem 60s ease-in-out forwards; 
+        }
+        .stem-1 { height: 220px; transform: rotate(-12deg); }
+        .stem-2 { height: 300px; }
+        .stem-3 { height: 190px; transform: rotate(12deg); }
+        .stem-4 { height: 250px; transform: rotate(-8deg); }
+        .stem-5 { height: 280px; transform: rotate(5deg); }
+        .stem-6 { height: 210px; transform: rotate(-18deg); }
+        .stem-7 { height: 240px; transform: rotate(15deg); }
+
+        /* Caleemaha (Leaves) */
+        .leaf { 
+            position: absolute; 
+            width: 45px; 
+            height: 25px; 
+            background: linear-gradient(135deg, #32cd32, #008000); 
+            border-radius: 0 25px 0 25px; 
+            box-shadow: inset 2px 2px 5px rgba(255,255,255,0.3);
+            /* Wuxuu soo baxayaa 60-ka ilbiriqsi dhexdiisa */
+            animation: showLeaf 60s ease-in-out forwards; 
+        }
+        .stem:nth-child(odd) .leaf { top: 40%; left: -40px; }
+        .stem:nth-child(even) .leaf { top: 50%; right: -40px; border-radius: 25px 0 25px 0; }
+
+        /* Ubaxa Laftiisa (Beautiful Rose Bloom) */
+        .bloom { 
+            position: absolute; 
+            top: -35px; 
+            left: -26px; 
+            width: 60px; 
+            height: 60px; 
+            background: radial-gradient(circle at 30% 30%, #ffb6c1, #ff1493, #8b0000); 
+            border-radius: 50% 50% 0 50%; 
+            box-shadow: inset 5px 5px 10px rgba(255,255,255,0.5), 0 0 20px rgba(255,20,147,0.6);
+            /* Wuxuu si tartiib ah u furmayaa 60-ka ilbiriqsi dhamaadkooda */
+            animation: bloomFlower 60s ease-in-out forwards; 
+        }
+        
+        /* Caleemaha dhexda ee ubaxa (Petals) */
+        .bloom::after {
+            content: ''; 
+            position: absolute;
+            top: 10px; left: 10px; width: 40px; height: 40px;
+            background: radial-gradient(circle at 30% 30%, #ff69b4, #c71585);
+            border-radius: 50% 50% 0 50%;
+            transform: rotate(-30deg);
+            box-shadow: inset 2px 2px 5px rgba(255,255,255,0.4);
+        }
+
+        /* 3-da Weji ee Korriinka Ubaxa (The 1-Minute Timeline) */
+        @keyframes growStem { 
+            0% { transform: scaleY(0); } 
+            30% { transform: scaleY(1); } /* Jirridu 18 ilbiriqsi ayay ku dhammaynaysaa */
+            100% { transform: scaleY(1); }
+        }
+        @keyframes showLeaf { 
+            0%, 25% { opacity: 0; transform: scale(0); } 
+            50%, 100% { opacity: 1; transform: scale(1); } /* Caleemuhu waxay baxayaan dhexda */
+        }
+        @keyframes bloomFlower { 
+            0%, 50% { transform: scale(0) rotate(0deg); } 
+            100% { transform: scale(1) rotate(45deg); } /* Ubaxu wuxuu u baxayaa sida ugu quruxda badan dhamaadka */
+        }
+        
         .firefly { position: absolute; width: 4px; height: 4px; background: #ffff00; border-radius: 50%; box-shadow: 0 0 10px #ffff00; animation: blink 2s infinite alternate; }
 
-        /* 3D Envelope & Letter Card */
-        #letter-scene { display: none; perspective: 1500px; width: 100%; height: 600px; align-items: center; justify-content: center; background: #fdf5e6; }
-        .book { position: relative; width: 320px; height: 450px; transform-style: preserve-3d; transition: transform 1.5s; cursor: pointer; }
+        /* ========================================= */
+        /* WARQADDA 3D (MOBILE RESPONSIVE FIXED)     */
+        /* ========================================= */
+        #letter-scene { display: none; perspective: 1500px; width: 100%; height: 100%; min-height: 600px; align-items: center; justify-content: center; background: #fdf5e6; position: relative; padding-top: 60px; /* Booska batoonka sare */ }
+        
+        .book { 
+            position: relative; 
+            width: 90vw; /* Si ay Mobile-ka ugu fariisato */
+            max-width: 320px; 
+            height: 70vh; /* Dherer ku xiran shaashadda */
+            max-height: 480px; 
+            transform-style: preserve-3d; 
+            transition: transform 1.5s; 
+            cursor: pointer; 
+            margin-bottom: 20px;
+        }
+        
         .page { position: absolute; width: 100%; height: 100%; top: 0; left: 0; border-radius: 10px; transform-origin: left; transition: transform 1.5s ease-in-out; box-shadow: inset 0 0 20px rgba(0,0,0,0.1), 0 10px 20px rgba(0,0,0,0.3); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; background: var(--white); backface-visibility: hidden; }
         
-        /* Cover */
-        .page-cover { background: #ff4d4d; color: white; z-index: 3; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        .page-cover { background: #ff4d4d; color: white; z-index: 3; text-align: center; }
         .page-cover h1 { font-family: 'Brush Script MT', cursive; font-size: 3rem; transform: rotate(-5deg); margin-bottom: 30px; }
         .open-btn { background: black; color: white; padding: 8px 15px; border-radius: 5px; font-size: 0.9rem; }
         
-        /* Inside Left (Photo Collage) */
         .page-left { transform: rotateY(180deg); z-index: 2; background: #fff; }
         .polaroid { background: white; padding: 10px 10px 30px 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); transform: rotate(-3deg); width: 90%; }
-        .polaroid img { width: 100%; clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%); /* Approximation of heart crop */ }
+        .polaroid img { width: 100%; clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%); }
 
-        /* Inside Right (Letter) */
-        .page-right { z-index: 1; text-align: left; padding: 30px; }
-        .page-right h3 { font-family: 'Brush Script MT', cursive; color: var(--rose-red); font-size: 2rem; margin-bottom: 15px; text-align: center; }
+        /* XALKA QORAALKA IS-DHEX GELAYAY EE MOBILE-KA */
+        .page-right { 
+            z-index: 1; 
+            text-align: left; 
+            padding: 25px 15px; /* Padding yaraaday */
+            overflow-y: auto; /* Haddii qoraalku bato waa la scroll-garayn karaa! */
+            display: block; /* Ka hortagga flex-center-ka */
+        }
+        .page-right::-webkit-scrollbar { width: 4px; }
+        .page-right::-webkit-scrollbar-thumb { background: var(--rose-red); border-radius: 4px; }
+
+        .page-right h3 { font-family: 'Brush Script MT', cursive; color: var(--rose-red); font-size: 1.8rem; margin-bottom: 10px; text-align: center; margin-top: 10px;}
         .page-right p { font-size: 0.9rem; line-height: 1.6; color: #444; font-family: 'Georgia', serif; font-style: italic; }
         
         .book.open .page-cover { transform: rotateY(-180deg); }
+
+        @media (max-width: 400px) {
+            .page-right p { font-size: 0.85rem; line-height: 1.4; } /* Far yar si ay ugu wada muuqato */
+            .page-cover h1 { font-size: 2.5rem; }
+        }
 
         /* Beautiful Footer */
         footer {
@@ -1358,6 +1527,7 @@
         }
 
         /* Qaybta Xoqitaanka (Scratch Area) */
+      /* Qaybta Xoqitaanka (Scratch Area) */
         .scratch-container {
             position: relative;
             width: 100%;
@@ -1373,22 +1543,49 @@
         }
 
         .scratch-content {
-            padding: 15px;
+            padding: 10px; /* Waan yareeyay padding-ka si boos u baxo */
             text-align: center;
-            font-size: 1.05rem;
-            line-height: 1.5;
+            font-size: 1rem; /* Farta inyar baan dhimay */
+            line-height: 1.4;
             color: var(--rose-red);
             font-weight: bold;
             font-family: 'Georgia', serif;
+            width: 100%;
+            box-sizing: border-box;
         }
+
+     .coupon-inner {
+            padding: 20px;
+            background: #fffdf5;
+            border: 2px dashed #ffd700; 
+            margin: 10px;
+            border-radius: 10px;
+            position: relative; /* Muhiim si Canvas-ku ugu dhex fariisto */
+            overflow: hidden;   /* Muhiim si uusan geesaha uga bixin */
+            display: flex;
+            flex-direction: column;
+            min-height: 180px; /* Dherer ku filan kaarka oo dhan */
+        }
+
+        /* Qaybtii hore ee .scratch-container dib dambe kuuguma baahna, waad tirtiri kartaa */
 
         .scratch-pad {
             position: absolute;
             top: 0; left: 0;
-            width: 100%; height: 100%;
+            width: 100%; height: 100%; /* 100% ayuu daboolayaa kaarka */
             cursor: pointer;
-            z-index: 2;
-            touch-action: none; /* Muhim u ah Mobile-ka si uusan u siiban */
+            z-index: 10; /* Wuxuu fuulayaa qoraalka dushiisa */
+            touch-action: none;
+        }
+        /* ========================================= */
+        /* XALKA MOBILE-KA (RESPONSIVE FIX)          */
+        /* ========================================= */
+        @media (max-width: 600px) {
+            .scratch-content {
+                font-size: 0.85rem; /* Fartu si caqli leh ayay u yaraanaysaa Mobile-ka */
+                padding: 5px;
+                line-height: 1.3;
+            }
         }
 
         /* ========================================= */
