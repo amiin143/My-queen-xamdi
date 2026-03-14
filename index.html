@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <audio id="bg-music" src="romantic-song.mp3" loop></audio>
+    <audio id="bg-music" src="music/background-music.m4a" loop></audio>
 
     <div id="login-screen">
         <h1 style="animation: glow 2s infinite alternate; font-size: 3rem; margin-bottom: 10px;">Amiin ❤️ Xamdi</h1>
@@ -1138,7 +1138,17 @@
             alert("Macaan badanteyda Janogasho, qaybtan weli lama gaarin waqtigeedii! 🙈❤️\n\nDulqaad yeelo xayati, waxay kuu furmi doontaa:\n" + unlockDate.toLocaleString());
             return; 
         }
-
+// XALKA CUSUB: Jooji dhammaan heesaha iyo muuqaallada marka laga baxo qaybtooda
+        const allMedia = document.querySelectorAll('audio:not(#bg-music), video');
+        allMedia.forEach(media => {
+            media.pause();
+        });
+        
+        // Dib u shid heesta asalka ah (Background) haddii ay xirnayd
+        const bgMusic = document.getElementById('bg-music');
+        if (bgMusic && bgMusic.paused) {
+            bgMusic.play().catch(e => console.log("Weli lama oggola inuu codku iskiis u furmo"));
+        }
         // Qari dhammaan qaybaha (Sections)
         const sections = document.querySelectorAll('.content-section');
         sections.forEach(section => {
@@ -1809,11 +1819,37 @@
         setTimeout(() => { lightbox.style.display = 'none'; videoPlayer.src = ''; }, 400);
     }
 
-    // AUTO-PAUSE AUDIO PLAYERS
+   
+   // ==========================================
+    // SHAQADA HEESAHA (AUTO-PAUSE & RESUME BG MUSIC)
+    // ==========================================
     document.addEventListener('play', function(e){
+        // Marka hees la shido, jooji dhammaan kuwa kale (Background-ka ku daro)
         var audios = document.getElementsByTagName('audio');
-        for(var i = 0, len = audios.length; i < len;i++){ if(audios[i] != e.target){ audios[i].pause(); } }
+        for(var i = 0, len = audios.length; i < len;i++){
+            if(audios[i] != e.target){
+                audios[i].pause();
+            }
+        }
     }, true);
+
+    // Marka heesaha Playlist-ka la joojiyo ama ay dhamaadaan, dib u shid Background-ka!
+    ['pause', 'ended'].forEach(function(evt) {
+        document.addEventListener(evt, function(e){
+            // Hubi in heesta la joojiyay aysan ahayn Background-ka laftiisa
+            if(e.target.id !== 'bg-music') {
+                // Hubi in aysan jirin hees kale oo dhexda ka socota
+                let isAnyPlaying = Array.from(document.getElementsByTagName('audio'))
+                                        .some(a => a.id !== 'bg-music' && !a.paused);
+                
+                // Haddii aysan hees kale soconin, shid heestii weynayd!
+                if(!isAnyPlaying) {
+                    let bgMusic = document.getElementById('bg-music');
+                    if(bgMusic) bgMusic.play().catch(err => console.log("Codka waa la xanibay"));
+                }
+            }
+        }, true);
+    });
 
     // TRUTH OR DARE
     const truthArray = [ "1. Waa maxay waxa ugu horreeya ee maskaxdaada ku soo dhaca markaad subaxdii toosto?", "2. Ii sheeg hal sir oo aadan weligaa ii sheegin intii aan is baranay.", "3. Goormaad si dhab ah u dareentay inaad i jeceshahay markii ugu horraysay?", "4. Maxaa ugu badan ee aad igu tabtaa markaan kala maqannahay?", "5. Waa maxay xusuusteenii ugu quruxda badnayd ee aan wada qaadannay?", "6. Haddii aad hal shay iga beddeli lahayd, maxay ahaan lahayd?", "7. Maxaa iigu kaa qurux badan muuqaalkayga?", "8. Ii sheeg riyadii ugu qosolka badnayd ee aad aniga iga aragtay adoo hurda.", "9. Waa maxay fariinta aan kuu soo diray ee aad ugu jeceshahay?", "10. Magac noocee ah ayaad jeceshahay inaan u bixino curadkeena ugu horreeya Insha'Allah?", "11. Weligaa ma iga maseyrtay adigoon ii sheegin? Goorma ayay ahayd?", "12. Waa maxay waxa ugu yar ee aan sameeyo ee ku farxad geliya?", "13. Haddii aan hal maalin isla qaadan lahayn meel kasta oo adduunka ah, xagee bay ahaan lahayd?", "14. Waa maxay dabeecadayda aad ugu jeceshahay?", "15. Maxay ahayd cabsidaadii ugu weynayd markaan is baranayney?", "16. Sheeg hal shay oo aan ku baray intii aan wada joognay 2-da sano.", "17. Haddii aad sheekadeena buug ka qorayso, maxaad u bixin lahayd magaciisa?", "18. Ii sheeg hal shay oo aad iga xishooto inaad i weydiiso.", "19. Waa maxay hadiyadd aan ku siiyay ee aad ugu jeceshahay?", "20. Maxaad dareentay markii aan ku iri 'Waan Ku Jeclahay' markii ugu horraysay?", "21. Waa maxay heesta aan wada dhageysano ee dareenkaaga ugu badan kicisa?", "22. Weligaa ma ooysay adigoo ii xiisay aniga?", "23. Ii sheeg hal caado oo aan leeyahay oo aad markii hore la yaabtay balse hadda aad ka hesho.", "24. Maxaa ugu weyn ee aad ka baratay jaceylkeena?", "25. Si daacad ah iigu sheeg... imisa boqolkiiba (%) ayaad i jeceshahay?" ];
@@ -1883,6 +1919,50 @@
         }
         renderConfetti();
     }
+
+    // ==========================================
+    // XALKA AAMUSIINTA CODKA EE MOBILE-KA (100% FIXED)
+    // ==========================================
+    
+    // Function aamusiinaya wax walba
+    function pauseAllMedia() {
+        document.querySelectorAll('audio, video').forEach(media => {
+            media.pause();
+        });
+    }
+
+    // Function dib u shidaya heesta weyn (haddii la soo noqdo)
+    function resumeBackgroundMusic() {
+        const mainApp = document.getElementById('main-app');
+        // Hubi in app-ku furan yahay (oo Login-ka laga soo gudbay)
+        if (mainApp && mainApp.style.display === 'block') {
+            // Hubi inaysan socon hees kale oo ay iyadu shidatay
+            let isAnyOtherPlaying = Array.from(document.querySelectorAll('audio:not(#bg-music), video')).some(media => !media.paused);
+            
+            if (!isAnyOtherPlaying) {
+                const bgMusic = document.getElementById('bg-music');
+                if (bgMusic) {
+                    bgMusic.play().catch(e => console.log("Taleefanka ayaa xannibay inuu iskiis u shidmo"));
+                }
+            }
+        }
+    }
+
+    // 1. Marka Tab-ka la beddelo (Standard)
+    document.addEventListener("visibilitychange", function() {
+        if (document.visibilityState === 'hidden') {
+            pauseAllMedia();
+        } else if (document.visibilityState === 'visible') {
+            resumeBackgroundMusic();
+        }
+    });
+
+    // 2. Marka App kale loo baxo ama shaashadda laga weecdo (Mobile Fallback)
+    window.addEventListener("blur", pauseAllMedia);
+    window.addEventListener("focus", resumeBackgroundMusic);
+
+    // 3. Marka Browser-ka la xiro ama la qariyo (Deep Mobile Fallback)
+    window.addEventListener("pagehide", pauseAllMedia);
 </script>
   
 
