@@ -1519,7 +1519,7 @@
             width: 100px;
             height: 100px;
             /* MAGACA SAWIRKAAGA HOOS GELI (sawirkeena.jpg) */
-            background-image: url('images/Snapchat-77515702~2.jpg'); 
+            background-image: url('../images/Snapchat-77515702~2.jpg'); 
             background-size: 300px 300px; /* Wuxuu ka dhigayaa hal sawir oo dhan */
             background-repeat: no-repeat;
             cursor: pointer;
