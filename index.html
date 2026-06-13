@@ -90,7 +90,12 @@
        <button class="nav-btn locked" data-time="2026-03-15T00:00:00" onclick="openTab('voice-note', this)">🔒 🎙️ Codkayga</button>
        <button class="nav-btn locked" data-time="2026-03-15T00:00:00" onclick="openTab('surprise', this)" style="background: #000; color: #ff1493; border-color: #ff1493;">🔒 🎁 Surprise</button>
 
-                </nav>
+         <button id="openGameSectionBtn" class="btn btn-pink-custom rounded-pill px-4 py-2 m-2 shadow-sm fw-bold">
+    🎮 Fur Ciyaarta: Yaa Badisa?
+</button>
+ 
+            
+            </nav>
         </div>
      
 
@@ -200,6 +205,50 @@
             </div>
         </section>
 
+
+<section id="gameSectionArea" class="container mt-4 d-none">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="game-container p-4 p-md-5 text-center shadow">
+                
+                <div id="startScreen">
+                    <h3 class="fw-bold text-pink-custom mb-3">Ciyaarta: Yaa Badisa? 👑💍</h3>
+                    <p class="text-muted mb-4">Su'aalo tijaabinaya xusuusteenna iyo sida aan isku naqaano.</p>
+                    <button id="startBtn" class="btn btn-pink-custom rounded-pill px-4 py-2 fw-bold shadow">
+                        Bilaaw Ciyaarta ❤️
+                    </button>
+                </div>
+
+                <div id="gameScreen" class="d-none">
+                    <div class="mb-3">
+                        <span class="badge bg-pink-custom px-3 py-2 rounded-pill" id="questionCounter">Su'aasha 1</span>
+                    </div>
+                    
+                    <div class="question-box mb-4 shadow-sm">
+                        <h5 id="questionText" class="fw-normal text-dark lh-base">
+                            Halkan waxaa ka soo baxaysa su'aasha...
+                        </h5>
+                    </div>
+
+                    <div class="d-flex justify-content-center gap-2">
+                        <button id="prevBtn" class="btn btn-secondary rounded-pill px-3 d-none">
+                            Dib u noqo
+                        </button>
+                        <button id="nextBtn" class="btn btn-pink-custom rounded-pill px-3 shadow">
+                            Su'aasha Xigta ➡️
+                        </button>
+                        <button id="resetBtn" class="btn btn-danger rounded-pill px-3 shadow d-none">
+                            Ku Celi 🔄
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+        
         <section id="contract" class="content-section">
             <div class="contract-container">
                 <div class="contract-header">
@@ -2166,6 +2215,100 @@
             if(bgMusic) bgMusic.play().catch(e => console.log(e));
         }, 2000); // 2 ilbiriqsi kadib ayuu gebi ahaanba xirmayaa
     }
+
+// Qaybta Ciyaarta
+    // 1. Furista iyo Xirista Section-ka Ciyaarta  
+    const openGameSectionBtn = document.getElementById('openGameSectionBtn');
+    const gameSectionArea = document.getElementById('gameSectionArea');
+
+    openGameSectionBtn.addEventListener('click', () => {
+        // Haddii ay qarsan tahay wuu soo saarayaa, haddii ay muuqatona wuu qarinayaa (Toggle)
+        gameSectionArea.classList.toggle('d-none');
+        
+        // Marka la furo, shaashada ha hoos u rogto si ay ciyaartu u muuqato
+        if (!gameSectionArea.classList.contains('d-none')) {
+            gameSectionArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+
+
+    // 2. Nidaamka Su'aalaha Ciyaarta
+    const questions = [
+        "Waa maxay taariikhdii rasmiga ahayd ee aan is baranay ama aan wada hadalno markii ugu horreysay?",
+        "Muxuu ahaa magacii ugu horreeyay ee macaan ee aan kuugu yeero intaanan 'Janogasho' kuu bixin?",
+        "Labadii sano ee aynu wada soconay, maxay ahayd maalintii kuugu farxadda badnayd?",
+        "Marka aynu yara is-qabanno, yaa inta badan raaligelinta bixiya marka hore? 😂",
+        "Yaa inta badan fariimaha WhatsApp-ka tirtira marka la yara xanaaqo? 👀",
+        "Marka aan wada hadlayno habeenkii, yaa inta badan hurdaddu ka adkaataa oo khadka ku seexda?",
+        "Yaa aad ugu dheereeya xanaaqa, yaase ku dheereeya dejinta?",
+        "Haddii Amiin uu sameynayo Website ama System cusub, muxuu noqon lahaa magaciisu? (Tilmaan: H...)",
+        "Waa maxay maadada ugu adag ee ay Xamdi ku barato kuliyadda Business Administration?",
+        "Amiin wuxuu macallin ahaa 5 sano. Ma xusuusataa maadadee ayuu dhigi jiray?",
+        "Waa maxay ballantii ugu weyneyd ee aynu isku qaadnay dhawaan? 💍",
+        "Haddii aynu aqal galno Insha'Allah, imisa carruur ah ayaad jeclaan lahayd inaan dhalno?",
+        "Waa maxay hal sifo oo aan adiga kugu jeclahay oo aadan waligaa iska beddeli karin?",
+        "Haddii aynu dalxiis u baxayno bisha malabka, wadan kee ayaad dooran lahayd inaan tagno?",
+        "Saddex eray ku qeex jaceylka aan kuu qabo."
+    ];
+
+    let currentIndex = 0;
+
+    const startScreen = document.getElementById('startScreen');
+    const gameScreen = document.getElementById('gameScreen');
+    const questionText = document.getElementById('questionText');
+    const questionCounter = document.getElementById('questionCounter');
+    const startBtn = document.getElementById('startBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const resetBtn = document.getElementById('resetBtn');
+
+    function updateQuestion() {
+        questionText.innerText = questions[currentIndex];
+        questionCounter.innerText = `Su'aasha ${currentIndex + 1} ee ${questions.length}`;
+
+        if (currentIndex === 0) {
+            prevBtn.classList.add('d-none');
+        } else {
+            prevBtn.classList.remove('d-none');
+        }
+
+        if (currentIndex === questions.length - 1) {
+            nextBtn.classList.add('d-none');
+            resetBtn.classList.remove('d-none');
+        } else {
+            nextBtn.classList.remove('d-none');
+            resetBtn.classList.add('d-none');
+        }
+    }
+
+    startBtn.addEventListener('click', () => {
+        startScreen.classList.add('d-none');
+        gameScreen.classList.remove('d-none');
+        currentIndex = 0;
+        updateQuestion();
+    });
+
+    nextBtn.addEventListener('click', () => {
+        if (currentIndex < questions.length - 1) {
+            currentIndex++;
+            updateQuestion();
+        }
+    });
+
+    prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateQuestion();
+        }
+    });
+
+    resetBtn.addEventListener('click', () => {
+        gameScreen.classList.add('d-none');
+        startScreen.classList.remove('d-none');
+        currentIndex = 0;
+    }); 
+
+       
 </script>
   
 
