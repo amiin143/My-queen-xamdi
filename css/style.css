@@ -2418,4 +2418,33 @@
             color: #000;
         }
 
-       
+        /* Midabada Gaarka ah ee Jaceylka (Custom CSS) */
+        .game-container {
+            background-color: #fdf2f8; /* Pink khafiif ah */
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(236, 72, 153, 0.1);
+        }
+        .text-pink-custom {
+            color: #db2777;
+        }
+        .btn-pink-custom {
+            background-color: #ec4899;
+            color: white;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        .btn-pink-custom:hover {
+            background-color: #be185d;
+            color: white;
+            transform: scale(1.05);
+        }
+        .question-box {
+            background-color: white;
+            min-height: 150px;
+            border: 2px solid #fce7f3;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
